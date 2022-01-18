@@ -1,0 +1,29 @@
+.box{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  height: 80vh;
+  justify-content: center;
+}
+.context{
+  color: #666;
+  font-size: 25rpx;
+}
+.btn{
+  margin-top: 35rpx;
+  padding: 0;
+  width: 430rpx;
+  height: 75rpx;
+  display: flex;
+  background: #ffcd24;
+  align-items: center;
+  justify-content: center;
+  border-radius: 55rpx;
+
+}
+.btn .btn-con{
+  font-size: 30rpx;
+  color: white;
+}
+

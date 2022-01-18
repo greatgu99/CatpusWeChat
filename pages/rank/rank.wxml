@@ -1,0 +1,43 @@
+<view class="Title">
+  <view class="txt">喵咪魅力榜</view>
+</view>
+
+<view class="Rank">
+  <view class="box" style="background-color: #FFE6E6"  bindtap="navigatorToCatIndex" data-id="{{catdata[0].id}}">
+    <view class="num" style="background-color:#FF8D8D"><text>1</text></view>
+    <image src="{{catdata[0].catpic}}" class="pic" style="border: 8rpx solid #ff6b6b"></image>
+    <view class="name">{{catdata[0].catname}}</view>
+    <view class="fans" style="color:#FF8D8D ">{{catdata[0].catlike}}个粉丝</view>
+  </view>
+  <view class="box" style="background-color: #FFEADB" bindtap="navigatorToCatIndex" data-id="{{catdata[1].id}}">
+    <view class="num" style="background-color:#FF9800"><text>2</text></view>
+    <image src="{{catdata[1].catpic}}" class="pic" style="border: 8rpx solid #FF9800"></image>
+    <view class="name">{{catdata[1].catname}}</view>
+    <view class="fans" style="color:#FF9800">{{catdata[1].catlike}}个粉丝</view>
+  </view>
+  <view class="box" style="background-color: #FFF4D0" bindtap="navigatorToCatIndex" data-id="{{catdata[2].id}}">
+    <view class="num" style="background-color:#FFD943"><text>3</text></view>
+    <image src="{{catdata[2].catpic}}" class="pic" style="border:solid 8rpx #FFD943"></image>
+    <view class="name">{{catdata[2].catname}}</view>
+    <view class="fans" style="color:#FFD943">{{catdata[2].catlike}}个粉丝</view>
+  </view>
+</view>
+
+<view wx:for="{{catdata1}}" wx:key="index">
+  <view class="DynFT">
+    <view class="FThead">
+      <image src="{{item.catpic}}" class="FTpic"></image>
+      <view class="FTtxt">
+        <view class="FTtxt1">{{item.catname}}</view>
+        <view class="FTtxt2">{{item.catcolor}}</view>
+      </view>
+    </view>
+    <view class="FTbtn"  bindtap="navigatorToCatIndex" data-id="{{item.id}}">
+      <view class="FTtxt">进入主页</view>
+    </view>
+  </view>
+</view>
+
+
+
+<!-- <button bindtap="showdata">显示</button> -->

@@ -1,0 +1,9 @@
+<view class="box">
+  <view class="context">暂未登录，无法查看个人信息</view>
+  <view class="btn" bindtap="getUserProfile">
+    <view class="btn-con">
+      立即授权
+    </view>
+  </view>
+  <!-- <button type="primary" bindtap="testlogin">测试</button> -->
+</view> 

@@ -1,0 +1,25 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/rank/rank",
+    "pages/catIndex/catIndex",
+    "pages/catalogue/catalogue",
+    "pages/addCat/addCat",
+    "pages/profile/profile",
+    "pages/profile2/profile2",
+    "pages/addPost/addPost",
+    "pages/myLike/myLike",
+    "pages/showTweets/showTweets",
+    "pages/info/info"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "首页",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#fff"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

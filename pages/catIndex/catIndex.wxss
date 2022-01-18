@@ -1,0 +1,96 @@
+.BigPic{
+  width: 100%;
+}
+
+.Title{
+  margin: 20rpx 30rpx;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.Title .Titname .Tittxt1{
+  font-size: 40rpx;
+  font-weight: bold;
+}
+.Title .Titname .Tittxt2{
+  margin-top: 4rpx;
+  font-size: 28rpx;
+  color: #999;
+}
+.Title .Titlike{
+  display: flex;
+}
+.Title .Titlike .Titnum{
+  font-size: 42rpx;
+  font-weight:bold;
+  color: #666;
+}
+.Title .Titlike .Titbtn{
+  margin-left: 10rpx;
+  height: 50rpx;
+  width: 80rpx;
+}
+
+
+.DynShow{
+  margin: 40rpx;
+  padding: 25rpx 30rpx 40rpx;
+  background: #f3f3f3;
+  border-radius:  15rpx;
+  /* border: 1px solid green; */
+}
+
+.DynShow .DynTitle{
+  /* border:1px solid blue; */
+  display: flex;
+  justify-content: space-between;
+}
+
+.DynShow .DynTitle .Dynhead{
+  /* border:1px solid blue; */
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.DynShow .DynTitle .Dynhead .Dynpic{
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 50%;
+}
+
+.DynShow .DynTitle .Dynhead .Dynname{
+  margin-left: 10rpx;
+  font-size: 28rpx;
+}
+
+.DynShow .DynTitle .Dynzan{
+  /* border:1px solid blue; */
+  display: flex;
+  align-items: center;
+}
+.DynShow .DynTitle .Dynzan .Dynpic{
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.DynShow .DynTitle .Dynzan .Dynnum{
+  margin-left: 5rpx;
+  color: #c4c4c4;
+}
+
+.DynShow .DynCont{
+  margin:40rpx 5rpx;
+  /* border:1px solid green;   */
+}
+.DynShow .DynCont .Dyntxt{
+  margin-bottom: 40rpx;
+}
+
+.DynShow .DynCont .DynCatpic{
+  /* border:1px blue solid; */
+  width: 500rpx;
+  /* height: 500rpx; */
+  border-radius: 30rpx;
+}

@@ -1,0 +1,67 @@
+<view class="FooTer">
+  <view class="FTCont" >
+
+    <view class="Normal">
+      <block wx:if = "{{page_num == 1}}">
+        <image class="pic" src="/images/TabBarImg/shouye-selected.png"></image>
+        <view class="txt_selected">首页</view>
+      </block>
+      <block wx:else>
+        <view  bindtap="JumpIndex">
+          <image class="pic" src="/images/TabBarImg/shouye.png"></image>
+          <view class="txt">首页</view>
+        </view>
+      </block>
+    </view>
+
+    
+    <view class="Normal">
+      <block wx:if = "{{page_num == 2}}">
+        <image class="pic" src="/images/TabBarImg/mulu-selected.png"></image>
+        <view class="txt_selected">目录</view>
+      </block>
+      <block wx:else>
+        <view  bindtap="JumpCatalogue">
+          <image class="pic" src="/images/TabBarImg/mulu.png"></image>
+          <view class="txt">目录</view>
+        </view>
+      </block>
+    </view>
+    
+
+    <view class="Circle">
+      <view class="WCircle">
+        <image class="YCircle" src="/images/TabBarImg/tianjia.png" bindtap="JumpAddPost"></image>
+      </view>
+      
+    </view>
+    
+    <view class="Normal" >
+      <block wx:if = "{{page_num == 3}}">
+        <image class="pic" src="/images/TabBarImg/zixun-selected.png"></image>
+        <view class="txt_selected">资讯</view>
+      </block>
+      <block wx:else >
+        <view  bindtap="JumpInfo">
+          <image class="pic" src="/images/TabBarImg/zixun.png"></image>
+          <view class="txt">资讯</view>
+        </view>
+      </block>
+    </view>
+
+    <view class="Normal">
+      <block wx:if = "{{page_num == 4}}">
+        <image class="pic" src="/images/TabBarImg/wode-selected.png"></image>
+        <view class="txt_selected">我的</view>
+      </block>
+      <block wx:else>
+        <view  bindtap="JumpProfile2">
+          <image class="pic" src="/images/TabBarImg/wode.png"></image>
+          <view class="txt">我的</view>
+        </view>
+      </block>
+
+    </view>
+
+  </view>
+</view>

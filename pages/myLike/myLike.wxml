@@ -1,0 +1,22 @@
+<view wx:for="{{catdata}}" wx:key="index">
+  <view class="DynFT">
+    <view class="FThead">
+      <image src="{{item.catpic}}" class="FTpic"></image>
+      <view class="FTtxt">
+        <view class="FTtxt1">{{item.catname}}</view>
+        <view class="FTtxt2">{{item.catcolor}}</view>
+      </view>
+    </view>
+    <view class="FTButton">
+      <view class="FTbtn1" bindtap="navigatorToCatIndex" data-id="{{item.id}}">
+        <view class="FTtxt1">进入主页</view>
+      </view>
+      <image wx:if="{{item.catlike}}" class="FTbtn2" src="/images/yixihuan.png" bindtap="LikeCat" data-ind="{{index}}"></image>
+      <image wx:else class="FTbtn2" src="/images/xihuan.png" bindtap="LikeCat" data-ind="{{index}}"></image>
+    </view>
+  </view>
+</view>
+
+<!-- <button bindtap="showCat">显示
+  
+</button> -->
