@@ -3,8 +3,9 @@
 Catpus前端测试小程序
 
 [后端代码指路](https://github.com/greatgu99/Catpus)
-框架：wxml + wxss (前端） + django (后端）
-[英文版介绍指路](https://github.com/MRSA-J/Catpus/blob/main/README.md)
+<br />
+框架：wxml + wxss (前端） + django (后端）  <br />
+[英文版介绍指路](https://github.com/MRSA-J/Catpus/blob/main/README.md)   <br />
 
 ## 小程序介绍
 
@@ -101,11 +102,13 @@ Catpus 喵校友 是一个围绕高校流浪猫建立的社交与救助平台。
 
 ## 贡献者
 
-代码：
-[@YuhanGu](https://github.com/greatgu99)
+代码：  <br />
+[@YuhanGu](https://github.com/greatgu99)     <br />
 [@ChenWei](https://github.com/MRSA-J).
-UI：
+<br />
+UI：     <br />
 [@蕨芽�]()
+<br />
 
 ## License
 
