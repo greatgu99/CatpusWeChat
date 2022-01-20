@@ -102,7 +102,7 @@ Catpus 喵校友 是一个围绕高校流浪猫建立的社交与救助平台。
 
 ## 贡献者
 
-代码：  <br />
+代码：  
 [@YuhanGu](https://github.com/greatgu99)     
 [@ChenWei](https://github.com/MRSA-J).
 <br />
