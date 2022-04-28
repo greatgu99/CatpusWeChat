@@ -28,7 +28,7 @@ Page({
       if (catdatat[id].catlike == false){
         catdatat[id].catlike = true
         wx.request({
-          url: 'http://127.0.0.1:8080/Catpus/likes/',
+          url: appInstance.globalData.URL+'/Catpus/likes/',
           method:"POST",
           data:{
             action:'likecat',
@@ -42,7 +42,7 @@ Page({
       else{
         catdatat[id].catlike=false
         wx.request({
-          url: 'http://127.0.0.1:8080/Catpus/likes/',
+          url: appInstance.globalData.URL+'/Catpus/likes/',
           method:"DELETE",
           data:{
             action:'unlikecat',
@@ -81,8 +81,8 @@ Page({
    */
   onShow: function (options) {
     wx.request({
-      // url: 'http://127.0.0.1:8080/Catpus/cat?page=1',
-      url: 'http://127.0.0.1:8080/Catpus/cat/',
+      // url: appInstance.globalData.URL+'/Catpus/cat?page=1',
+      url: appInstance.globalData.URL+'/Catpus/cat/',
       method:"GET",
       data:{
         action:'getcat'
@@ -99,7 +99,7 @@ Page({
             console.log('else')
             promiseList.push(new Promise((resolve,reject)=> {
               wx.request({
-                url:'http://127.0.0.1:8080/Catpus/likes/',
+                url:appInstance.globalData.URL+'/Catpus/likes/',
                 method:"POST",
                 data:{
                   action:'getlikecat',

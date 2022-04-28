@@ -34,7 +34,7 @@ Page({
           console.log(appInstance.globalData.userInfo)
           ret = appInstance.globalData.userInfo
           wx.request({
-            url: 'http://127.0.0.1:8080/Catpus/user/',
+            url: appInstance.globalData.URL+'/Catpus/user/',
             method:"POST",
             data:{
               action:'login',
@@ -96,7 +96,7 @@ Page({
         if (res.code) {
           //发起网络请求
           wx.request({
-            url: 'http://localhost:8080/test/',
+            url: appInstance.globalData.URL+'/test/',
             data: {
               text:'🌿🌿🌿🙋😙🤣🤪',
             },

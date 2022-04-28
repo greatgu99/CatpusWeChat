@@ -1,49 +1,46 @@
-// pages/rank/rank.js
-
+// pages/chooseCat/choooseCat.js
 const DB = wx.cloud.database().collection("Cat")
-
-const _ = wx.cloud.database().command
-
 let appInstance = getApp();
-
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    catdata:[],
-    catdata1:[],
+    catdate:[],
   },
-  showdata(){
-    console.log(this.data.catdata)
-    console.log(this.data.catdata1)
-  },
-  navigatorToCatIndex(e){
-    console.log(e.currentTarget.dataset.id)
-    // console.log("进入")
-    wx.navigateTo({
-      url:'/pages/catIndex/catIndex?catid='+e.currentTarget.dataset.id,
+  returnCat(e){
+    var id = e.currentTarget.dataset.id;
+    id=this.data.catdate[id].id
+    console.log(id);
+
+
+    const eventChannel = this.getOpenerEventChannel()
+    eventChannel.emit('acceptDataFromOpenedPage', {data: id});
+
+
+
+    wx.navigateBack({
+      delta: 1,
+      success: (res) => {},
+      fail: (res) => {},
+      complete: (res) => {},
     })
   },
   /**
    * 生命周期函数--监听页面加载
    */
-  onShow: function (options) {
-    let temp=[]
+  onLoad: function (options) {
     wx.request({
-      // url: appInstance.globalData.URL+'/Catpus/cat?page=1',
       url: appInstance.globalData.URL+'/Catpus/cat/',
-      method:"GET",
+      mathod:'GET',
       data:{
-        action:'getcat'
+        action:"getcat"
       },
       success:(res)=>{
-        temp=res.data.cat_list;
-        temp = temp.slice(3)
+        console.log(res.data.cat_list)
         this.setData({
-          catdata:res.data.cat_list,
-          catdata1:temp,
+          catdate:res.data.cat_list,
         })
       }
     })
@@ -59,7 +56,7 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-  onLoad: function () {
+  onShow: function () {
 
   },
 

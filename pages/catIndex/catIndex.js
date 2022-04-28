@@ -37,7 +37,7 @@ Page({
         catdatat.iflike = true
         catdatat.catlike=catdatat.catlike+1
         wx.request({
-          url: 'http://127.0.0.1:8080/Catpus/likes/',
+          url: appInstance.globalData.URL+'/Catpus/likes/',
           method:"POST",
           data:{
             action:'likecat',
@@ -52,7 +52,7 @@ Page({
         catdatat.iflike = false
         catdatat.catlike=catdatat.catlike-1
         wx.request({
-          url: 'http://127.0.0.1:8080/Catpus/likes/',
+          url: appInstance.globalData.URL+'/Catpus/likes/',
           method:"DELETE",
           data:{
             action:'unlikecat',
@@ -84,7 +84,7 @@ Page({
         Dyndatat[id].iflike = true
         Dyndatat[id].like = Dyndatat[id].like +1
         wx.request({
-          url: 'http://127.0.0.1:8080/Catpus/likes/',
+          url: appInstance.globalData.URL+'/Catpus/likes/',
           method:"POST",
           data:{
             action:'likemoments',
@@ -99,7 +99,7 @@ Page({
         Dyndatat[id].iflike = false
         Dyndatat[id].like = Dyndatat[id].like -1
         wx.request({
-          url: 'http://127.0.0.1:8080/Catpus/likes/',
+          url: appInstance.globalData.URL+'/Catpus/likes/',
           method:"DELETE",
           data:{
             action:'unlikemoments',
@@ -127,7 +127,7 @@ Page({
     })
     // cat
     wx.request({
-      url: 'http://127.0.0.1:8080/Catpus/cat/?catid='+catid,
+      url: appInstance.globalData.URL+'/Catpus/cat/?catid='+catid,
       method:'GET',
       data:{
         action:'getonecat'
@@ -142,7 +142,7 @@ Page({
           })
         } else{
           wx.request({
-            url:'http://127.0.0.1:8080/Catpus/likes/',
+            url:appInstance.globalData.URL+'/Catpus/likes/',
             method:"POST",
             data:{
               action:'getlikecat',
@@ -163,7 +163,7 @@ Page({
       }
     })
     wx.request({
-      url: 'http://127.0.0.1:8080/Catpus/moments/',
+      url: appInstance.globalData.URL+'/Catpus/moments/',
       method:'POST',
       data:{
         action:'getmoments',
@@ -190,7 +190,7 @@ Page({
 
             promiseList.push(new Promise((resolve,reject)=> {
               wx.request({
-                url:'http://127.0.0.1:8080/Catpus/likes/',
+                url:appInstance.globalData.URL+'/Catpus/likes/',
                 method:'POST',
                 data:{
                   action:'getlikemoments',

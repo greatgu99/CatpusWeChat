@@ -2,7 +2,7 @@
 App({
   onLaunch() {
     wx.cloud.init({
-      env:"test-1g1asems708c946b"
+      env:"env-4g9exouzd255b5c3"
     })
     // 展示本地存储能力
     const logs = wx.getStorageSync('logs') || []
@@ -17,6 +17,8 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    URL:'https://catpus.top'
+    // URL:'http://127.0.0.1:8080'
   }
 })

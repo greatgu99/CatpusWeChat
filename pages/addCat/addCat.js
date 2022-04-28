@@ -1,5 +1,6 @@
 // pages/addCat/addCat.js
 const DB = wx.cloud.database().collection("Cat")
+let appInstance = getApp();
 Page({
 
   /**
@@ -169,13 +170,13 @@ Page({
         wx.uploadFile({
           filePath: this.data.tempFilePaths,
           name: 'file',
-          url: 'http://localhost:8080/Catpus/cat/addpic',
+          url: appInstance.globalData.URL+'/Catpus/cat/addpic',
           success:(res)=>{
             console.log('res.data')
             res.data=JSON.parse(res.data)
             console.log(res.data.tmp_file)
             wx.request({
-              url: 'http://127.0.0.1:8080/Catpus/cat/',
+              url: appInstance.globalData.URL+'/Catpus/cat/',
               method:"POST",
               data:{
                 action:'addcat',

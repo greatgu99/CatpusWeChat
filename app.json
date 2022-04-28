@@ -10,6 +10,7 @@
     "pages/profile2/profile2",
     "pages/addPost/addPost",
     "pages/myLike/myLike",
+    "pages/chooseCat/chooseCat",
     "pages/showTweets/showTweets",
     "pages/info/info"
   ],

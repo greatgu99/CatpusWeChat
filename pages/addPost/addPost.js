@@ -117,13 +117,13 @@ Page({
         wx.uploadFile({
           filePath: this.data.tempFilePaths,
           name: 'file',
-          url: 'http://localhost:8080/Catpus/cat/addpic',
+          url: appInstance.globalData.URL+'/Catpus/cat/addpic',
           success:(res)=>{
             console.log('res.data')
             res.data=JSON.parse(res.data)
             console.log(res.data.tmp_file)
             wx.request({
-              url: 'http://127.0.0.1:8080/Catpus/moments/',
+              url: appInstance.globalData.URL+'/Catpus/moments/',
               method:"POST",
               data:{
                 action:'addmoments',
@@ -195,14 +195,15 @@ Page({
     })
   },
   chooseCat(){
+    console.log('123123')
     wx.navigateTo({
-      url: "/pages/chooseCat/choooseCat",
+      url: "/pages/chooseCat/chooseCat",
       events: {
         // 为指定事件添加一个监听器，获取被打开页面传送到当前页面的数据
         acceptDataFromOpenedPage: data=>{
           console.log(data.data)
           wx.request({
-            url: 'http://127.0.0.1:8080/Catpus/cat/?catid='+data.data,
+            url: appInstance.globalData.URL+'/Catpus/cat/?catid='+data.data,
             method:'GET',
             data:{
               action:'getonecat'
