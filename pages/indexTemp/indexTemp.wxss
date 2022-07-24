@@ -1,72 +1,88 @@
-/**index.wxss**/
-
-.userinfo-avatar {
-  overflow: hidden;
-  width: 128rpx;
-  height: 128rpx;
-  border-radius: 20rpx;
-}
-
-.box{
-  background: #f3f3f3;
-  /* border: #d7d7d7 2rpx dashed; */
-  border-radius: 15rpx;
-  margin: 30rpx 40rpx;
-  
-  /* width: 690rpx; */
-  height: 294rpx;
-}
-.box .userinfo{
-  display: flex;
-  margin:0rpx 14rpx;
-}
-
-.box .userinfo .user-img{
-  margin: 20rpx;
-}
-
-.box .userinfo .user-con{
-  
-  padding: 35rpx 25rpx;
-}
-.box .userinfo .user-con .con1{
-  font-size: 27rpx;
-  font-weight: bolder;
-}
-
-.box .box-bottom{
-  margin: 35rpx 30rpx;
+.Title{
+  padding:20rpx 40rpx;
   display: flex;
   justify-content: space-between;
 }
+.Title .txt{
+  font-size:35rpx;
+  font-weight: bold;
+}
+.Title .btn{
+  height: 50rpx;
+  width: 130rpx;
+  /* padding: 1rpx 20rpx 20rpx; */
+  /* box-sizing: border-box; */
+  background: #ffdb5e;
+  
+  border-radius: 50rpx;
+  text-align: center;
+}
+.Title .btn text{
+  color: #fff;
+  font-size:25rpx;
+}
 
-.box .box-bottom .bottom-left{
+.Rank{
   display: flex;
+  padding: 0 40rpx;
+  text-align: center;
 }
 
-.box .box-bottom .bottom-left .bottom-img{ 
-  width: 38rpx;
-  height: 38rpx;
-  /* border: 1rpx solid red; */
+.Rank .box{
+  width: 216rpx;
+  margin:0 12rpx;
+  padding: 25rpx 0 20rpx;
+  background: #ffe6e6;
+  border-radius: 20rpx;
+  position: relative;
+}
+.Rank .box .num{
+  width: 60rpx;
+  height: 60rpx;
+  display: flex;
+  justify-content: center;
+  background: #ff6b6b;
+  color:white;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 25rpx;
+  position: absolute;
+  top: 10rpx;
+  left: 10rpx;
+  z-index: 100;
+}
+.Rank .box .pic{
+  width: 110rpx;
+  height: 110rpx;
+  border-radius: 50%;
+  border: 8rpx solid #ff6b6b;
+  margin-bottom: 10rpx;
 }
 
-.box .box-bottom .bottom-left  .bottom-con{
-  margin-left: 10rpx;
-  font-size: 26rpx;
-  color: #999;
+.Rank .box .name{
+  font-size:32rpx;
+  font-weight: bold;
+}
+.Rank .box .fans{
+  font-size:26rpx;
+  color: #ff9e9e;
 }
 
-.box .box-bottom .bottom-right{
-  color: #999;
-  font-weight: bolder;
+
+.dynamic{
+  font-size: 35rpx;
+  padding: 20rpx 40rpx;
+  font-weight: bold;
+  /* border:1px solid green; */
 }
+
 
 .DynShow{
-  margin: 40rpx;
+  margin: 0 40rpx 40rpx;
   padding: 25rpx 30rpx 40rpx;
   background: #f3f3f3;
-  border-radius:  15rpx;
-  /* border: 1px solid green; */
+  border-radius:  30rpx;
+  /* border: 1px solid blue; */
 }
 
 .DynShow .DynTitle{
@@ -181,20 +197,21 @@
   margin-left: 6rpx;
   height: 50rpx;
   width: 80rpx;
+  /* display: flex;
+  padding: 1rpx 20rpx 20rpx;
+  box-sizing: border-box;
+  background: #fed025;
+  justify-content: center;
+  border-radius: 50rpx;
+  align-items: center; */
+}
+.DynFT .FTbtn .FTbtn2 text{
+  color: #fff;
+  font-size:25rpx;
 }
 
 
 .block{
   height: 190rpx;
   width: 100%;
-}
-.del{
-  width: 60rpx;
-  height: 60rpx;
-  margin-right: 20rpx;
-}
-.DynheadRight{
-  display:flex; 
-  align-items: center;
-  justify-content:center; 
 }

@@ -1,7 +1,7 @@
 // pages/catalogue/catalogue.js
-const DB = wx.cloud.database().collection("Cat")
-const DBPC = wx.cloud.database().collection("PCLL")
-const _ = wx.cloud.database().command
+// const DB = wx.cloud.database().collection("Cat")
+// const DBPC = wx.cloud.database().collection("PCLL")
+// const _ = wx.cloud.database().command
 
 let appInstance = getApp();
 
@@ -73,7 +73,7 @@ Page({
   navigatorToCatIndex(e){
     console.log(e.currentTarget.dataset.id)
     wx.navigateTo({
-      url:'/pages/catIndex/catIndex?CatId='+e.currentTarget.dataset.id,
+      url:'/pages/catIndex/catIndex?catid='+e.currentTarget.dataset.id,
     })
   },
   /**

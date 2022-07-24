@@ -1,8 +1,8 @@
 // pages/myLike/myLike.js
 
-const DB = wx.cloud.database().collection("Cat")
-const DBPC = wx.cloud.database().collection("PCLL")
-const _ = wx.cloud.database().command
+// const DB = wx.cloud.database().collection("Cat")
+// const DBPC = wx.cloud.database().collection("PCLL")
+// const _ = wx.cloud.database().command
 
 let appInstance = getApp();
 

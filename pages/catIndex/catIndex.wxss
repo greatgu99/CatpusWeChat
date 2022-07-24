@@ -72,7 +72,7 @@
 }
 .DynShow .DynTitle .Dynzan .Dynpic{
   width: 50rpx;
-  height: 50rpx;
+  height: 45rpx;
 }
 
 .DynShow .DynTitle .Dynzan .Dynnum{

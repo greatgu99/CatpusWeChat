@@ -1,4 +1,4 @@
-// pages/catIndex/catIndex.js
+// index.js
 // const DB = wx.cloud.database().collection("Cat")
 // const DB2 = wx.cloud.database().collection("CatPost")
 // const DB3 = wx.cloud.database().collection("User")
@@ -8,72 +8,76 @@
 
 let appInstance = getApp();
 
-
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-    catid:'',
+
+    catdata:[],
     Dyndata:[],
-    catdata:{},
     UserId:"",
   },
-
-
-
+  // getopenid(){
+  //   wx.cloud.callFunction({
+  //     name:'getOpenId',
+  //     data:{
+  //       message:'getOpenId',
+  //     }
+  //   }).then(res=>{
+  //     console.log(res.result.OPENID)//res就将appid和openid返回了
+  //       //做一些后续操作，不用考虑代码的异步执行问题。
+  //   })
+  // },
+  navigateToRankList(){
+    wx.navigateTo({
+      url: '/pages/rank/rank',
+    })
+  },
   LikeCat(ind){
     if (appInstance.globalData.userInfo==null) {
       wx.navigateTo({
-        url: '/pages/profile2/profile2?to=/pages/catIndex/catIndex%3Fcatid%3D' + this.data.catid,
+        url: '/pages/profile2/profile2?to=/pages/index/index',
       })
     } else{
-      // let id = ind.currentTarget.dataset.ind;
-      // console.log(id);
-      let catdatat = this.data.catdata
-      console.log(catdatat)
-      if (catdatat.iflike == false){
-        catdatat.iflike = true
-        catdatat.catlike=catdatat.catlike+1
+      let id = ind.currentTarget.dataset.ind;
+      console.log(id);
+      let Dyndatat = this.data.Dyndata
+      if (Dyndatat[id].cat.catlike == false){
+        Dyndatat[id].cat.catlike = true
         wx.request({
           url: appInstance.globalData.URL+'/Catpus/likes/',
           method:"POST",
           data:{
             action:'likecat',
             data:{
-              catid:catdatat.id,
+              catid:Dyndatat[id].cat.id,
               personid:appInstance.globalData.userInfo.personid
             }
           }
         })
       }
       else{
-        catdatat.iflike = false
-        catdatat.catlike=catdatat.catlike-1
+        Dyndatat[id].cat.catlike = false
         wx.request({
           url: appInstance.globalData.URL+'/Catpus/likes/',
           method:"DELETE",
           data:{
             action:'unlikecat',
             data:{
-              catid:catdatat.id,
+              catid:Dyndatat[id].cat.id,
               personid:appInstance.globalData.userInfo.personid
             }
           }
         })
       }
       this.setData({
-        catdata:catdatat
+        Dyndata:Dyndatat
       })
     }
   },
-
   LikeDyn(ind){
     console.log('77777777')
     if (appInstance.globalData.userInfo==null) {
       wx.navigateTo({
-        url: '/pages/profile2/profile2?to=/pages/catIndex/catIndex%3Fcatid%3D' + this.data.catid,
+        url: '/pages/profile2/profile2?to=/pages/index/index',
       })
     } else{
       let id = ind.currentTarget.dataset.ind;
@@ -115,80 +119,58 @@ Page({
       })
     }
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-    console.log(options.catid)
-    let catid = options.catid
-    this.setData({
-      catid:catid,
-    })
-    // cat
+  onShow() {
+    let tempDyn=[];
     wx.request({
-      url: appInstance.globalData.URL+'/Catpus/cat/?catid='+catid,
+      url: appInstance.globalData.URL+'/Catpus/cat/',
       method:'GET',
       data:{
-        action:'getonecat'
+        action:'getcat'
       },
       success:(res)=>{
-        let temp=res
-        console.log(temp.data.cat)
-        if (appInstance.globalData.userInfo==null) {
-          res.data.cat.iflike=false
-          this.setData({
-            catdata:res.data.cat,
-          })
-        } else{
-          wx.request({
-            url:appInstance.globalData.URL+'/Catpus/likes/',
-            method:"POST",
-            data:{
-              action:'getlikecat',
-              data:{
-                personid:appInstance.globalData.userInfo.personid,
-                catid:catid
-              }
-            },
-            success:(res)=>{
-              console.log(res.data.catlike)
-              temp.data.cat.iflike=res.data.catlike
-              this.setData({
-                catdata:temp.data.cat,
-              })
-            }
-          })
-        }
+        console.log(res.data.cat_list)
+        this.setData({
+          catdata:res.data.cat_list
+        })
       }
     })
     wx.request({
       url: appInstance.globalData.URL+'/Catpus/moments/',
-      method:'POST',
+      method:'GET',
       data:{
-        action:'getmoments',
-        data:{
-          catid:catid,
-        }
+        action:'getmoments'
       },
       success:(res)=>{
         console.log(res.data.moments_list)
-
-
-
         if (appInstance.globalData.userInfo==null){
           for (let i =0;i<res.data.moments_list.length;i++){
             res.data.moments_list[i].iflike=false
-            // res.data.moments_list[i].cat.catlike=false;
+            res.data.moments_list[i].cat.catlike=false;
           }
           this.setData({
             Dyndata:res.data.moments_list
           })
         } else {
-          let promiseList=[]
+          let promiseList1=[],promiseList2=[]
           for (let i =0;i<res.data.moments_list.length;i++){
-
-            promiseList.push(new Promise((resolve,reject)=> {
+            promiseList1.push(new Promise((resolve,reject)=> {
+              wx.request({
+                url:appInstance.globalData.URL+'/Catpus/likes/',
+                method:'POST',
+                data:{
+                  action:'getlikecat',
+                  data:{
+                    personid:res.data.moments_list[i].person.personid,
+                    catid:res.data.moments_list[i].cat.id
+                  }
+                },
+                success:(res)=>{
+                  console.log(res.data)
+                  resolve([i,res.data.catlike])
+                }
+              })
+            }))
+            promiseList2.push(new Promise((resolve,reject)=> {
               wx.request({
                 url:appInstance.globalData.URL+'/Catpus/likes/',
                 method:'POST',
@@ -206,77 +188,36 @@ Page({
               })
             }))
           }
-          Promise.all(promiseList).then((rspList)=>{
+          let a = Promise.all(promiseList1).then((rspList)=>{
+            console.log(rspList)
+            rspList.map((val)=>{
+              res.data.moments_list[val[0]].cat.catlike=val[1]
+            })
+          })
+          let b = Promise.all(promiseList2).then((rspList)=>{
             console.log(rspList)
             rspList.map((val)=>{
               res.data.moments_list[val[0]].iflike=val[1]
             })
+          })
+          Promise.all([a,b]).then(()=>{
             this.setData({
               Dyndata:res.data.moments_list
             })
           })
-
         }
+      },
+      fail:(res)=>{
+        console.log(res)
       }
     })
-    // catdyn
-    // let tempDyn=[];
-    // let tempCat={};
-    // DB.where({
-    //   _id:_.eq(options.CatId)
-    // })
-    // .get({
-    //   success:res=>{
-    //     tempCat=res.data[0];
-    //     console.log(tempCat)
-    //     if (appInstance.globalData.userInfo==null) {
-    //       tempCat.CatLike=false;
-    //       this.setData({
-    //         catdata:tempCat,
-    //       })
-    //     }else{
-    //       console.log("@@@@@@@@@@@@@@@@@@@@")
-    //       wx.cloud.callFunction({
-    //         name:'getOpenId',
-    //         data:{
-    //           message:'getOpenId',
-    //         }
-    //       }).then(res=>{
-    //         let PersonId1 = res.result.OPENID
-    //         console.log(PersonId1)
-    //         this.setData({
-    //           UserId:PersonId1,
-    //         })
-    //         DBPC.where({
-    //           PersonId: _.eq(PersonId1),
-    //           CatId:_.eq(options.CatId),
-    //         })
-    //         .get({
-    //           success:res=>{
-    //             if (res.data.length==0){
-    //               tempCat.CatLike=false;
-    //             }
-    //             else{
-    //               tempCat.CatLike=true;
-    //             }
-    //             this.setData({
-    //               catdata:tempCat,
-    //             })
-    //           }
-    //         })
-    //       })
-    //     }
-    //   }
-    // })
-    // DB2.orderBy('CreatedTime','desc').where({
-    //   CatId:_.eq(options.CatId)
-    // })
-    // .get({
+    // DB2.orderBy('CreatedTime','desc').get({
     //   success:res=>{
     //     console.log(res.data)
     //     console.log(res.data.length);
     //     let promiseList = [];
     //     for (let i=0;i<res.data.length;i++){
+
     //       promiseList.push(new Promise((resolve,reject)=> {
     //         let temp = new Object();
     //         console.log("##########");
@@ -294,6 +235,7 @@ Page({
     //         })
     //         .get({
     //           success: res1 => {
+    //             console.log(243243)
     //             temp.PersonPic=res1.data[0].userInfo.avatarUrl
     //             temp.PersonName=res1.data[0].userInfo.nickName
     //             DB.where({
@@ -306,10 +248,21 @@ Page({
     //                 temp.CatColor=res1.data[0].CatColor;
     //                 temp.CatName=res1.data[0].CatName;
     //                 temp.CatPicUrl=res1.data[0].CatPicUrl;
-    //                 temp.CatLikeUser=res1.data[0].Catlike;
-    //                 temp.CatLocation=res1.data[0].Location;
+    //                 temp.CatLikeUser=res1.data[0].Catlike
+    //                 // console.log("solveLikesolveLikesolveLike");
+    //                 // let that=this;
+    //                 // new Promise(function(res1,rej){
+    //                 //   temp = that.solveLike(temp);
+    //                 //   res1();
+    //                 // }).then(()=>{
+    //                 //   
+    //                 //   console.log(temp)
+    //                 // })
+
+
+
     //                 if (appInstance.globalData.userInfo==null) {
-    //                   console.log("^^^^^^^^^^^^^^^^^^^")
+    //                   console.log("!@#$%^&*(@#$%^&*(#$%^&*")
     //                   temp.PostLike=false;
     //                   temp.CatLike=false;
     //                   resolve([i,temp]);
@@ -347,7 +300,7 @@ Page({
     //                           CatId:_.eq(temp.CatId),
     //                         })
     //                         .get({
-    //                           success:res=>{
+    //                           success:(res)=>{
     //                             console.log("}}}}}}}}}}}}}}}}}}}}}}}}}}")
     //                             console.log(res);
     //                             if (res.data.length==0){
@@ -358,84 +311,73 @@ Page({
     //                             }
     //                             console.log(temp);
     //                             resolve([i,temp]);
+    //                           },
+    //                           fail:(res)=>{
+    //                             console.log(res)
     //                           }
     //                         })
+    //                       },
+    //                       fail:(res)=>{
+    //                         console.log(res)
+
     //                       }
     //                     })
     //                   })
     //                 }
+
+
+
+
+
+
+    //                 // temp = this.solveLike(temp);
+    //                 // resolve([i,temp]);
+                    
+    //                 console.log(temp)
+    //                 // console.log("solveLikesolveLikesolveLike")
+                    
+                    
+    //               },
+    //               fail:(res)=>{
+    //                 console.log(res)
+    //                 console.log('failfail')
     //               }
     //             })
+                
     //           },
     //           fail: res1 => {
     //           }
     //         })
+            
     //       }));
     //     }
+    //     console.log(promiseList)
     //     Promise.all(promiseList).then((rspList)=>{
+    //       console.log(rspList)
     //       rspList.map((val)=>{
-    //         console.log(val);
     //         tempDyn.push(val[1]);
     //       })
-    //       console.log(tempDyn)
     //       this.setData({
     //         Dyndata:tempDyn,
     //       })
-    //       console.log(this.data.Dyndata)
     //     })
+
     //   }
+      
     // })
   },
   showDyn(){
-    console.log(this.data.catdata);
+    console.log(this.data.Dyndata)
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-    
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  
+  navigatorToCatIndex(e){
+    console.log(e.currentTarget.dataset.id)
+    let id = e.currentTarget.dataset.id
+    // console.log("进入")
+    wx.navigateTo({
+      url:'/pages/catIndex/catIndex?catid='+e.currentTarget.dataset.id,
+    })
   }
+
 })
+

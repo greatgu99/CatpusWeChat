@@ -20,7 +20,6 @@
 
 <view class="warning-text" wx:if="{{ShowWarning2}}">猫的名字不能为空</view>
 <view class="warning-text" wx:if="{{ShowWarning4}}">名字包含敏感信息</view>
-
 <view class='fenlei'>
   <text>地址</text>
   <!-- 下拉框 -->

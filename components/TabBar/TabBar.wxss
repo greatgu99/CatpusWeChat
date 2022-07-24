@@ -11,6 +11,9 @@
   border-top-left-radius: 46rpx;
   border-top-right-radius: 46rpx;
   z-index: 997;
+
+  bottom: calc(constant(safe-area-inset-bottom) /2);
+  padding-bottom: calc(env(safe-area-inset-bottom) /2);
 }
 .FooTer .FTCont{
   display: flex;

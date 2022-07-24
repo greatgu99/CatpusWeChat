@@ -1,5 +1,5 @@
 // pages/info/info.js
-const db = wx.cloud.database({});
+let appInstance = getApp();
 
 Page({
 
@@ -14,7 +14,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.cloud.init();
+    // wx.cloud.init();
     this.getPhotoTweets();
   },
 
@@ -28,13 +28,25 @@ Page({
    */
   getPhotoTweets: function () {
     var that = this
-    db.collection('photoTweets').get({
-      success(res) {
-        that.setData({
-          photoTweets: res.data.reverse(),  // 使最新推文在上面
+    wx.request({
+      url: appInstance.globalData.URL+'/Catpus/tweet/',
+      method:"GET",
+      data:{
+        action:'gettweet',
+      },
+      success:(res)=>{
+        this.setData({
+          photoTweets:res.data.tweet_list
         })
       }
     })
+    // db.collection('photoTweets').get({
+    //   success(res) {
+    //     that.setData({
+    //       photoTweets: res.data.reverse(),  // 使最新推文在上面
+    //     })
+    //   }
+    // })
   },
   /**
    * 公众号推文跳转

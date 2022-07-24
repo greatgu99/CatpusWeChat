@@ -12,7 +12,10 @@
     "pages/myLike/myLike",
     "pages/chooseCat/chooseCat",
     "pages/showTweets/showTweets",
-    "pages/info/info"
+    "pages/info/info",
+    "pages/testPage/testPage",
+    "pages/indexTemp/indexTemp"
+
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -22,5 +25,6 @@
     "backgroundColor": "#fff"
   },
   "style": "v2",
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
 }

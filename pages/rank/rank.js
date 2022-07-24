@@ -1,8 +1,8 @@
 // pages/rank/rank.js
 
-const DB = wx.cloud.database().collection("Cat")
+// const DB = wx.cloud.database().collection("Cat")
 
-const _ = wx.cloud.database().command
+// const _ = wx.cloud.database().command
 
 let appInstance = getApp();
 

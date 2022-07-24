@@ -1,5 +1,5 @@
 // pages/chooseCat/choooseCat.js
-const DB = wx.cloud.database().collection("Cat")
+// const DB = wx.cloud.database().collection("Cat")
 let appInstance = getApp();
 Page({
 

@@ -1,12 +1,12 @@
 // pages/profile/profile.js
 let appInstance = getApp();
 
-const DB = wx.cloud.database().collection("Cat")
-const DB2 = wx.cloud.database().collection("CatPost")
-const DB3 = wx.cloud.database().collection("User")
-const DBPP = wx.cloud.database().collection("PPLL")
-const DBPC = wx.cloud.database().collection("PCLL")
-const _ = wx.cloud.database().command
+// const DB = wx.cloud.database().collection("Cat")
+// const DB2 = wx.cloud.database().collection("CatPost")
+// const DB3 = wx.cloud.database().collection("User")
+// const DBPP = wx.cloud.database().collection("PPLL")
+// const DBPC = wx.cloud.database().collection("PCLL")
+// const _ = wx.cloud.database().command
 
 Page({
 
