@@ -35,7 +35,7 @@ Page({
   navigateToSquare(){
     wx.navigateTo(
       {
-        url:'/pages/index/index',
+        url:'/pages/index1/index1',
       }
     )
   },

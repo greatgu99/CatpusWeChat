@@ -1,7 +1,7 @@
 <TabBar page_num="2" ></TabBar>
 
 <view style="display:flex;justify-content:space-between;background:#fff;align-items:center">
-  <view class="Title">目录</view>
+  <view class="Title">猫咪一览</view>
   <view class="addCatBtn" bindtap="navigateToAddCat"><text>+添加新猫咪</text></view>
 </view>
 <view wx:for="{{catdata}}" wx:key="index">

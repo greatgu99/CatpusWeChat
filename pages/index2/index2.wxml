@@ -1,3 +1,4 @@
+<!--pages/index2/index2.wxml-->
 <TabBar page_num="1" ></TabBar>
 <view class="Title">
   <view class="txt">猫咪魅力榜</view>
@@ -31,52 +32,15 @@
 
 <view class='Title'>
   <view class='select' bindtap='navigateToSquare' >
-    <view class='selected' bindtap='navigateToSquare'>猫咪广场</view>
-    <view class='n_selected' bindtap='navigateToMyLike'>守护的猫</view>
+    <view class='n_selected' bindtap='navigateToSquare'>猫咪广场</view>
+    <view class='selected' bindtap='navigateToMyLike'>守护的猫</view>
     <!-- <image src='/images/mulu.png' class='selected'></image> -->
   </view>
 </view>
 
-<view wx:for="{{Dyndata}}" wx:key="index"  class="DynShow">
-  <view class="DynTitle">
-    <view class="Dynhead">
-      <image src="{{item.person.avatarurl}}" class="Dynpic"></image>
-      <view class="Dynname">{{item.person.nickname}}</view>
-    </view>
-    <view class="Dynzan" bindtap="LikeDyn" data-ind="{{index}}">
-      <image wx:if="{{item.iflike}}" src="/images/like.png" class="Dynpic"></image>
-      <image wx:else src="/images/dislike.png" class="Dynpic"></image>
-      <view  class="Dynnum">{{item.like}}</view>
-    </view>
-  </view>
 
-  <view class="DynCont">
-    <view class="Dyntxt">
-      {{item.content}}
-    </view>
-    <image class="DynCatpic" mode="widthFix" src="{{item.pic}}">
+<view class='ShouHuDeMao'> 
+  <image class='CatImage' src='/images/kongyemian-shouhubeijing.png'> </image> 
+  <view class='Txt'>您还没有想守护的猫咪，快去目录认领吧 </view> 
+</view> 
 
-    </image>
-  </view>
-
-  <view class="DynFT">
-    <view class="FThead">
-      <image src="{{item.cat.catpic}}" class="FTpic"></image>
-      <view class="FTtxt">
-        <view class="FTtxt1">{{item.cat.catname}}</view>
-        <view class="FTtxt2">{{item.cat.catcolor}}</view>
-      </view>
-    </view>
-    <view class="FTbtn">
-      <view class="FTbtn1" bindtap="navigatorToCatIndex" data-id="{{item.cat.id}}" ><text>进入主页</text></view>
-      <image wx:if="{{item.cat.catlike}}" class="FTbtn2" bindtap="LikeCat" data-ind="{{index}}" src="/images/yixihuan.png"></image>
-      <image wx:else class="FTbtn2" bindtap="LikeCat" data-ind="{{index}}" src="/images/xihuan.png"></image>
-    </view>
-  </view>
-</view>
-
-<!-- <button type = "primary" bindtap="showDyn">展示</button> -->
-
-<view class="block">
-
-</view>

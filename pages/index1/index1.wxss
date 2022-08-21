@@ -1,3 +1,4 @@
+/* pages/index1/index1.wxss */
 .Title{
   padding:20rpx 40rpx;
   display: flex;
@@ -34,17 +35,18 @@
 }
 .Title .select .selected{
   color:#000000;
-  font-size:33rpx;
+  font-size:30rpx;
   padding:30rpx 60rpx 0rpx;
   position:relative;
-  border-bottom: 1rpx solid rgb(255, 174, 0);
+  display:inline;
 }
 .Title .select .n_selected{
   color:#000000;
-  font-size:33rpx;
+  font-size:30rpx;
   padding:30rpx 60rpx 0rpx;
   position:relative;
 }
+
 
 .Rank{
   display: flex;

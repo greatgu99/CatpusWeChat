@@ -38,7 +38,8 @@
       </view>
     </view>
     <view wx:else class="CatBtn" bindtap='chooseCat'>
-      <view><text>+选择相关猫咪</text></view>
+      <image class="ChoiceImage" src='/Images/addPostRelCat.png'></image>
+     <!-- <view><text>+选择相关猫咪</text></view> -->
     </view>
 
     <view class='Tab'>

@@ -3,8 +3,9 @@
 </view>
 <view wx:else>
   <view class="pic"  bindtap="ChooseImage">
+    <image class="pic-icon" src="/images/addCatIcon.png"></image>
     <view class="pic-con">
-      添加图片/
+      点击添加图片
     </view>
   </view>
 </view>
@@ -21,7 +22,7 @@
 <view class="warning-text" wx:if="{{ShowWarning2}}">猫的名字不能为空</view>
 <view class="warning-text" wx:if="{{ShowWarning4}}">名字包含敏感信息</view>
 <view class='fenlei'>
-  <text>地址</text>
+  <text>地点</text>
   <!-- 下拉框 -->
     <view class='select_box'>
       <view class='select' catchtap='selectTaps'>
@@ -38,6 +39,7 @@
 <view class="cat-color">
   <text class="color-con">毛色</text>
   <view class="color-right">
+  <!--
     <view class="color-right-con">
       <view class="con1">
         <view>单色</view>
@@ -59,6 +61,7 @@
         <view>三色</view>        
       </view>
     </view>
+    -->
     <view class="color-btn">
 
       <view wx:for="{{items}}" bindtap='imageclick' data-id='{{item.color}}' wx:key="index">

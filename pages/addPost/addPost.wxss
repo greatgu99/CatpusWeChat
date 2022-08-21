@@ -1,5 +1,5 @@
 page{
-  background-color:#F3F3F3 ;
+  background-color:#fffacd ;
 }
 
 .FormCont {
@@ -46,8 +46,12 @@ page{
   justify-content: center;
   border-radius: 50rpx;
   align-items: center;
-  border: 1rpx solid #ffcb1e;
-  width:300rpx;
+  width:400rpx;
+}
+
+.FormCont .CatBtn .ChoiceImage{
+  height:60rpx;
+  width: 400rpx;
 }
 
 .FormCont .CatBtn text{

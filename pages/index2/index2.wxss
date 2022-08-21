@@ -238,4 +238,30 @@
 .block{
   height: 190rpx;
   width: 100%;
+}/* pages/index2/index2.wxss */
+
+
+
+.ShouHuDeMao{
+  padding:20rpx 40rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.ShouHuDeMao .CatImage{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:300rpx;
+  width:330rpx;
+  padding:60rpx 0rpx 30rpx 0rpx;
+}
+
+.ShouHuDeMao .Txt{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28rpx;
+  color:#9c9c9c;
 }
