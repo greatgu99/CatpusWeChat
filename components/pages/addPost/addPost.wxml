@@ -1,0 +1,62 @@
+<!--pages/addPost/addPost.wxml-->
+<view class='FormCont'>
+
+
+    <view class ="Input">
+      <input class="weui-input" auto-focus name="inputPost" bindinput="bindText" maxlength='100' placeholder="请输入文字(100字以内)" />
+      <text class="Count">{{text_length}}/100</text> 
+    </view>
+
+    <view class="warning-text" wx:if="{{ShowWarning1}}">文字不能为空</view>
+    <view class="warning-text" wx:if="{{ShowWarning4}}">包含敏感文字</view>
+
+    <!-- 此处为添加图片 -->
+    <view wx:if="{{HasPic}}">
+      <image class="pic-img" mode="widthFix" src="{{ tempFilePaths }}"></image>
+    </view>
+    <view wx:else>
+      <view class="pic"  bindtap="ChooseImage">
+        <view class="pic-con">
+          添加图片
+        </view>
+      </view>
+    </view>
+
+    <view class="warning-text" wx:if="{{ShowWarning2}}">图片不能为空</view>
+    <view class="warning-text" wx:if="{{ShowWarning5}}">图片包含敏感信息</view>
+    
+
+    <view  wx:if="{{HasCat}}">
+      <view class="DynFT" bindtap="returnCat" data-id="{{index}}">
+        <view class="FThead">
+          <image src="{{CatData.catpic}}" class="FTpic"></image>
+          <view class="FTtxt">
+            <view class="FTtxt1">{{CatData.catname}}</view>
+            <view class="FTtxt2">{{CatData.catcolor}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view wx:else class="CatBtn" bindtap='chooseCat'>
+      <image class="ChoiceImage" src='/Images/addPostRelCat.png'></image>
+     <!-- <view><text>+选择相关猫咪</text></view> -->
+    </view>
+
+    <view class='Tab'>
+      <button class="FTbtn" bindtap="subPost">
+        <view><text>完成</text></view>
+      </button>
+    </view>
+
+    <view class="warning-text" wx:if="{{ShowWarning3}}">请添加相关猫咪</view>
+
+    <!-- <canvas
+    id="compress"
+    type="2d"
+    style="width:{{cWidth}}px; height:{{cHeight}}px"
+    >
+    </canvas> -->
+
+    <!-- <button bindtap="showSec">显示</button> -->
+</view>
+

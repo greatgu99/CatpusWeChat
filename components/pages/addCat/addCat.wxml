@@ -1,0 +1,91 @@
+<view wx:if="{{HasPic}}">
+  <image class="pic-img" mode="widthFix" src="{{ tempFilePaths }}"></image>
+</view>
+<view wx:else>
+  <view class="pic"  bindtap="ChooseImage">
+    <image class="pic-icon" src="/images/addCatIcon.png"></image>
+    <view class="pic-con">
+      点击添加图片
+    </view>
+  </view>
+</view>
+
+<view class="warning-text" wx:if="{{ShowWarning1}}">图片不能为空</view>
+<view class="warning-text" wx:if="{{ShowWarning5}}">图片包含敏感信息</view>
+
+
+<view class='cat-name'>
+  <text class='name-con'>猫的名字</text>
+  <input placeholder="请输入文字（10字以内）" maxlength='10' bindinput="addName"></input>
+</view>
+
+<view class="warning-text" wx:if="{{ShowWarning2}}">猫的名字不能为空</view>
+<view class="warning-text" wx:if="{{ShowWarning4}}">名字包含敏感信息</view>
+<view class='fenlei'>
+  <text>地点</text>
+  <!-- 下拉框 -->
+    <view class='select_box'>
+      <view class='select' catchtap='selectTaps'>
+        <text class='select_text'>{{selectDatas[indexs]}}</text>
+        <!-- <image class='words_img' src='../../images/sanjiao.png'></image> -->
+        <image class='select_img {{shows&&"select_img_rotate"}}' src='/images/sanjiao.png'></image>
+      </view>
+      <view class='option_box' style='height:{{shows?(selectDatas.length>5?300:selectDatas.length*60):0}}rpx;'>
+        <text class='option' style='{{indexs==selectDatas.length-1&&"border:0;"}}' wx:for='{{selectDatas}}' wx:key='this' data-index='{{index}}' catchtap='optionTaps'>{{item}}</text>
+      </view>
+    </view>
+</view>
+
+<view class="cat-color">
+  <text class="color-con">毛色</text>
+  <view class="color-right">
+  <!--
+    <view class="color-right-con">
+      <view class="con1">
+        <view>单色</view>
+        <view>无花纹</view>
+      </view>
+      <view class="con1">
+        <view>单色</view>
+        <view>有花纹</view>
+      </view>
+      <view class="con1">
+        <view>双色</view>
+        <view>无花纹</view>
+      </view>
+      <view class="con1">
+        <view>双色</view>
+        <view>有花纹</view>
+      </view>
+      <view class="con1">
+        <view>三色</view>        
+      </view>
+    </view>
+    -->
+    <view class="color-btn">
+
+      <view wx:for="{{items}}" bindtap='imageclick' data-id='{{item.color}}' wx:key="index">
+        <block wx:if="{{item.checked == 0}}" >
+          <image class='color-circle' src="{{item.src}}"></image>
+        </block>
+        <block wx:elif="{{item.checked == 1}}">
+          <image class='color-circle' src="{{item.selected_src}}" ></image>
+        </block>
+      </view>
+
+      <view class="color-circle"></view>
+      <view class="color-circle"></view>
+
+    </view>
+  </view>
+</view>
+
+<view class="warning-text" wx:if="{{ShowWarning3}}">请选择猫的毛色</view>
+
+<view class="sub-btn"  bindtap="submit_cat">
+  <view class="btn-bg">
+    <view class='btn-con'>
+      添加
+    </view>
+  </view>
+</view>

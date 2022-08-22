@@ -1,0 +1,41 @@
+<image class="BigPic" src="{{catdata.catpic}}" mode="widthFix"></image>
+
+
+<view class="Title">
+  <view class="Titname">
+    <view class="Tittxt1">{{catdata.catname}}</view>
+    <view class="Tittxt2">{{catdata.catlocation}} | {{catdata.catcolor}}</view>
+  </view>
+  <view class="Titlike">
+    <view class="Titnum">{{catdata.catlike}}</view>
+    <image  wx:if="{{catdata.iflike}}" class="Titbtn" src="/images/yixihuan.png" bindtap="LikeCat" data-ind="0"></image>
+    <image wx:else class="Titbtn" src="/images/xihuan.png" bindtap="LikeCat" data-ind="0"></image>
+  </view>
+</view>
+
+<view wx:for="{{Dyndata}}" wx:key="index" class="DynShow">
+  <view class="DynTitle">
+    <view class="Dynhead">
+      <image src="{{item.person.avatarurl}}" class="Dynpic"></image>
+      <view class="Dynname">{{item.person.nickname}}</view>
+    </view>
+    <view class="Dynzan">
+
+      <image wx:if="{{item.iflike}}" src="/images/like.png" class="Dynpic"  bindtap="LikeDyn" data-ind="{{index}}"></image>
+      <image wx:else src="/images/dislike.png" class="Dynpic"  bindtap="LikeDyn" data-ind="{{index}}"></image>
+
+      <view  class="Dynnum">{{item.like}}</view>
+    </view>
+  </view>
+
+  <view class="DynCont">
+    <view class="Dyntxt">
+      {{item.content}}
+    </view>
+    <image class="DynCatpic" mode="widthFix" src="{{item.pic}}">
+
+    </image>
+  </view>
+</view>
+
+<!-- <button bindtap="showDyn">显示</button> -->

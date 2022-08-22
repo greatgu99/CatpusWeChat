@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "TabBar":"/components/TabBar/TabBar"
+  },
+  "navigationBarTitleText":"目录",
+  "enablePullDownRefresh": true
+}

@@ -1,0 +1,203 @@
+/**index.wxss**/
+
+.userinfo-avatar {
+  overflow: hidden;
+  width: 128rpx;
+  height: 128rpx;
+  border-radius: 20rpx;
+}
+
+.box{
+  background: #f3f3f3;
+  /* border: #d7d7d7 2rpx dashed; */
+  border-radius: 15rpx;
+  margin: 30rpx 40rpx;
+  
+  /* width: 690rpx; */
+  height: 294rpx;
+}
+.box .userinfo{
+  display: flex;
+  margin:0rpx 14rpx;
+}
+
+.box .userinfo .user-img{
+  margin: 20rpx;
+}
+
+.box .userinfo .user-con{
+  
+  padding: 35rpx 25rpx;
+}
+.box .userinfo .user-con .con1{
+  font-size: 27rpx;
+  font-weight: bolder;
+}
+
+.box .box-bottom{
+  margin: 35rpx 30rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.box .box-bottom .bottom-left{
+  display: flex;
+}
+
+.box .box-bottom .bottom-left .bottom-img{ 
+  width: 38rpx;
+  height: 38rpx;
+  /* border: 1rpx solid red; */
+}
+
+.box .box-bottom .bottom-left  .bottom-con{
+  margin-left: 10rpx;
+  font-size: 26rpx;
+  color: #999;
+}
+
+.box .box-bottom .bottom-right{
+  color: #999;
+  font-weight: bolder;
+}
+
+.DynShow{
+  margin: 40rpx;
+  padding: 25rpx 30rpx 40rpx;
+  background: #f3f3f3;
+  border-radius:  15rpx;
+  /* border: 1px solid green; */
+}
+
+.DynShow .DynTitle{
+  /* border:1px solid blue; */
+  display: flex;
+  justify-content: space-between;
+}
+
+.DynShow .DynTitle .Dynhead{
+  /* border:1px solid blue; */
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.DynShow .DynTitle .Dynhead .Dynpic{
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 50%;
+}
+
+.DynShow .DynTitle .Dynhead .Dynname{
+  margin-left: 10rpx;
+  font-size: 28rpx;
+}
+
+.DynShow .DynTitle .Dynzan{
+  /* border:1px solid blue; */
+  display: flex;
+  align-items: center;
+}
+.DynShow .DynTitle .Dynzan .Dynpic{
+  width: 50rpx;
+  height: 45rpx;
+}
+
+.DynShow .DynTitle .Dynzan .Dynnum{
+  margin-left: 5rpx;
+  color: #c4c4c4;
+}
+
+.DynShow .DynCont{
+  margin:40rpx 5rpx;
+  /* border:1px solid green;   */
+}
+.DynShow .DynCont .Dyntxt{
+  margin-bottom: 40rpx;
+}
+
+.DynShow .DynCont .DynCatpic{
+  /* border:1px blue solid; */
+  width: 500rpx;
+  /* height: 500rpx; */
+  border-radius: 30rpx;
+}
+
+.DynFT {
+  display: flex;
+  justify-content: space-between;
+  padding: 15rpx;
+  background: #fff;
+  border-radius: 35rpx;
+  align-items: center;
+  /* border:1px solid blue; */
+}
+
+.DynFT .FThead{
+  display: flex;
+}
+
+.DynFT .FThead .FTpic{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+
+.DynFT .FThead .FTtxt{
+  margin-left: 15rpx;
+}
+.DynFT .FThead .FTtxt .FTtxt1{
+  font-size: 32rpx;
+  font-weight: bold;
+}
+
+.DynFT .FThead .FTtxt .FTtxt2{
+  margin-top: 2rpx;
+  font-size: 26rpx;
+  color: #9c9c9c;
+}
+.DynFT .FTbtn{
+  display: flex;
+  /* border: 1px solid green; */
+}
+.DynFT .FTbtn .FTbtn1{
+  height: 42rpx;
+  width: 130rpx;
+  /* padding: 1rpx 20rpx 20rpx; */
+  /* box-sizing: border-box; */
+  border:4rpx solid #ffe585;
+  display: flex;
+  justify-content: center;
+  border-radius: 50rpx;
+  align-items: center;
+}
+.DynFT .FTbtn .FTbtn1 text{
+  color: #ffe06e;
+  font-size:25rpx;
+}
+
+.DynFT .FTbtn .FTbtn2{
+  margin-left: 6rpx;
+  height: 50rpx;
+  width: 80rpx;
+}
+
+
+.block{
+  height: 190rpx;
+  width: 100%;
+}
+.del{
+  width: 60rpx;
+  height: 60rpx;
+  margin-right: 20rpx;
+}
+.DynheadRight{
+  display:flex; 
+  align-items: center;
+  justify-content:center; 
+}
+
+
+

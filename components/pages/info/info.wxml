@@ -1,0 +1,15 @@
+<!--pages/info/info.wxml-->
+<TabBar page_num="3" ></TabBar>
+<view class='Info-list'>
+  <view class='Item' wx:for="{{photoTweets}}" bindtap="toPhotoTweets" data-id='{{index}}'>
+    <image class='Image' src='{{item.photo}}'></image>
+    <view class='Text'>
+      <view class='Title'>{{item.title}}</view>
+      <view class='Content'>{{item.content}}</view>
+    </view> 
+  </view>
+</view>
+ 
+<view class="block">
+</view>
+

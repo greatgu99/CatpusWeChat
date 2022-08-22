@@ -30,24 +30,23 @@
       "disablePlugins": [],
       "outputPath": ""
     },
-    "enableEngineNative": false,
-    "bundle": false,
     "useIsolateContext": false,
-    "useCompilerModule": true,
-    "userConfirmedUseCompilerModuleSwitch": false,
     "userConfirmedBundleSwitch": false,
     "packNpmManually": false,
     "packNpmRelationList": [],
-    "minifyWXSS": true
+    "minifyWXSS": true,
+    "disableUseStrict": false,
+    "minifyWXML": true,
+    "showES6CompileOption": false,
+    "useCompilerPlugins": false,
+    "ignoreUploadUnusedFiles": true,
+    "useStaticServer": true,
+    "lazyloadPlaceholderEnable": false
   },
   "compileType": "miniprogram",
   "libVersion": "2.16.0",
-  "appid": "wxd5af89d9f41c51bd",
-  "projectname": "maomaoprogram-1",
-  "editorSetting": {
-    "tabIndent": "insertSpaces",
-    "tabSize": 2
-  },
+  "appid": "wx9eae77b66c64f788",
+  "projectname": "maomaoprogram",
   "condition": {
     "search": {
       "list": []
@@ -67,5 +66,9 @@
     "miniprogram": {
       "list": []
     }
+  },
+  "editorSetting": {
+    "tabIndent": "insertSpaces",
+    "tabSize": 2
   }
 }
