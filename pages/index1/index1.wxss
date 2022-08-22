@@ -1,4 +1,87 @@
 /* pages/index1/index1.wxss */
+.testHeader{
+  width: 200rpx;
+  height: 300rpx;
+  /* margin-top: 50rpx; */
+  margin-left:12rpx;
+  /* margin:20rpx 12rpx; */
+  padding: 75rpx 0 20rpx;
+  border-radius: 20rpx;
+  position: relative;
+}
+.testHeaderBox{
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.testHeaderBox .pic{
+  top:120rpx;
+  left:45rpx;
+  position: absolute; 
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  border: 8rpx solid #ff6b6b;
+  /* margin-bottom: 10rpx; */
+}
+.testHeaderBox .pic1{
+  top:80rpx;
+  left:45rpx;
+  position: absolute;
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  border: 8rpx solid #ff6b6b;
+  /* margin-bottom: 10rpx; */
+}
+.testHeaderChampion{
+  width: 200rpx;
+  height: 350rpx;
+  margin-top: 0rpx;
+  margin-left: 12rpx;
+  /* margin:20rpx 12rpx; */
+  padding: 25rpx 0 20rpx;
+  border-radius: 20rpx;
+  position: relative;
+}
+.testHeaderBox .num{
+  position:absolute;
+  width:100rpx;
+  height:120rpx;
+  left:0rpx;
+  top:45rpx;
+}
+.testHeaderBox .num1{
+  position:absolute;
+  width:100rpx;
+  height:120rpx;
+  left:0rpx;
+}
+.testHeaderBox .name{
+  font-size:32rpx;
+  font-weight: bold;
+  position:absolute;
+  bottom:90rpx;
+}
+.testHeaderBox .fans{
+  font-size:26rpx;
+  color: #ff9e9e;
+  position:absolute;
+  bottom:50rpx;
+}
+.testHeaderBox .name1{
+  font-size:32rpx;
+  font-weight: bold;
+  position:absolute;
+  bottom:130rpx;
+}
+.testHeaderBox .fans1{
+  font-size:26rpx;
+  color: #ff9e9e;
+  position:absolute;
+  bottom:90rpx;
+}
+
 .Title{
   padding:20rpx 40rpx;
   display: flex;
@@ -48,10 +131,19 @@
 }
 
 
+
 .Rank{
   display: flex;
   padding: 0 40rpx;
   text-align: center;
+}
+
+.Rank .sidai{
+  position:absolute;
+  width:260rpx;
+  height:80rpx;
+  top:400rpx;
+  left:230rpx;
 }
 
 .Rank .box{

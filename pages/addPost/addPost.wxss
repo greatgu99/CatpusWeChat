@@ -1,5 +1,5 @@
 page{
-  background-color:#fffacd ;
+  background-color:#fdfcea ;
 }
 
 .FormCont {
@@ -60,7 +60,7 @@ page{
 }
 
 .FormCont .Tab{
-  background:#ffffff;
+  background:#fdfcea;
   position:fixed;
   bottom:0;
   width:100%;

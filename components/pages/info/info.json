@@ -1,6 +1,0 @@
-{
-  "usingComponents": {
-    "TabBar":"/components/TabBar/TabBar"
-  },
-  "navigationBarTitleText": "资讯"
-}

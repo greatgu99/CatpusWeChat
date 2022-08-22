@@ -1,4 +1,0 @@
-/* pages/showTweets/showTweets.wxss */
-page{
-  background-color: white;
-}

@@ -4,7 +4,7 @@
   <view class="btn" bindtap="navigateToRankList"><text>完整榜单</text></view>
 </view>
 
-<view class="Rank">
+<!--<view class="Rank">
   <view class="box" style="background-color: #FFE6E6" bindtap="navigatorToCatIndex" data-id="{{catdata[0].id}}">
     <view class="num" style="background-color:#FF8D8D"><text>1</text></view>
     <image src="{{catdata[0].catpic}}" class="pic" style="border: 8rpx solid #ff6b6b"></image>
@@ -23,7 +23,34 @@
     <view class="name">{{catdata[2].catname}}</view>
     <view class="fans" style="color:#FFD943">{{catdata[2].catlike}}个粉丝</view>
   </view>
+</view> -->
+
+<view class="Rank">
+  <view class="testHeaderBox">
+    <image src="/images/paihangbang-2.png" class="testHeader"></image>
+    <image src="/images/paihang-yinpai.png" class="num"></image>
+    <image src="{{catdata[1].catpic}}" class="pic" style="border: 8rpx solid hsl(22, 100%, 71%)"></image>
+    <view class="name">{{catdata[1].catname}}</view>
+    <view class="fans" style="color:#f59e57 ">{{catdata[1].catlike}}个粉丝</view>
+  </view>
+  <view class="testHeaderBox">
+    <image src="/images/Group 52361.png" class="testHeaderChampion"bindtap="navigatorToCatIndex" data-id="{{catdata[0].id}}"></image>
+    <image src="/images/paihang-jinpai.png" class="num1"></image>
+    <image src="{{catdata[0].catpic}}" class="pic1" style="border: 8rpx solid rgb(255, 129, 107)"></image>
+    <view class="name1">{{catdata[0].catname}}</view>
+    <view class="fans1" style="color:#fa746b">{{catdata[0].catlike}}个粉丝</view>
+  </view>
+  <view class="testHeaderBox">
+    <image src="/images/paihangbang-3.png" class="testHeader"></image>
+    <image src="/images/paihang-tongpai.png" class="num"></image>
+    <image src="{{catdata[2].catpic}}" class="pic" style="border: 8rpx solid rgb(255, 216, 107)"></image>
+    <view class="name">{{catdata[2].catname}}</view>
+    <view class="fans" style="color:hsl(48, 88%, 54%)">{{catdata[2].catlike}}个粉丝</view>
+  </view>  
+  <image src="/images/sidai.png" class="sidai"></image>
+  
 </view>
+
 
 <!-- <view class="dynamic">
   动态
