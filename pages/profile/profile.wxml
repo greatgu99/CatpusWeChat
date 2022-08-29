@@ -9,13 +9,27 @@
     </view>
   </view>
 
-  <view class="box-bottom" bindtap="navigateToMyLike">
+  <!-- <view class="box-bottom" bindtap="navigateToMyLike">
     <view class="bottom-left">
       <image class="bottom-img" src="/images/profileimg.png"></image>
       <view class="bottom-con">我喜欢的猫咪</view>  
     </view>
     <view class="bottom-right" >
       >
+    </view>
+  </view> -->
+  <view class="box-bottom">
+    <view class="box-info">
+      <images src="/images/zhongchou.png" class="box-pic"></images>
+      <text class="box-txt">喵喵众筹</text>
+    </view>
+    <view class="box-info">
+      <images src="/images/touweijilu.png" class="box-pic"></images>
+      <text class="box-txt">投喂记录</text>
+    </view>
+    <view class="box-info">
+      <images src="/images/yijian.png" class="box-pic"></images>
+      <text class="box-txt">意见反馈</text>
     </view>
   </view>
 </view>

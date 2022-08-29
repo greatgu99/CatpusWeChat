@@ -47,11 +47,11 @@ page{
   margin-left: 36rpx;
   height: 50rpx;
   /* border:1px solid green; */
-  border-radius: 50rpx;
+  border-radius: 35rpx;
   padding: 20rpx;
-  padding-left: 40rpx;
+  padding-left: 30rpx;
   width: 480rpx;
-  font-size: 24rpx;
+  font-size: 25rpx;
   background:#e6e6e6;
 }
 
@@ -64,6 +64,7 @@ page{
 .cat-color .color-con{
   font-size: 30rpx;
   font-weight: bolder;
+  padding-top:45rpx;
 }
 
 .cat-color .color-right{
@@ -148,14 +149,16 @@ page{
 /* 下拉框 */
 .select_box {
   background: #e6e6e6;
-  width: 540rpx;
+  width: 525rpx;
   margin-left: 60rpx;
-  height: 90rpx;
+  height: 85rpx;
   line-height: 90rpx;
   text-align: left;
   display: flex;
   justify-content: center;
+  border-radius: 35rpx;
   position: relative;
+  padding-left: 10rpx;
   /* border:1px solid green; */
   /* border-radius: 90rpx; */
 }

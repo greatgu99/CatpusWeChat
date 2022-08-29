@@ -2,7 +2,10 @@
 <TabBar page_num="1" ></TabBar>
 <view class="Title">
   <view class="txt">猫咪魅力榜</view>
-  <view class="btn" bindtap="navigateToRankList"><text>完整榜单</text></view>
+  <view class="btn" bindtap="navigateToRankList">
+    <view class="text">完整榜单</view>
+    <image src="/images/RankSanJiao.png" class="sanjiao"></image>
+  </view>
 </view>
 
 <!--<view class="Rank">

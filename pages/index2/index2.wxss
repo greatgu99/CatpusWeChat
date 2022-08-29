@@ -92,17 +92,25 @@
 }
 .Title .btn{
   height: 50rpx;
-  width: 130rpx;
+  width: 200rpx;
   /* padding: 1rpx 20rpx 20rpx; */
   /* box-sizing: border-box; */
-  background: #ffdb5e;
-  
   border-radius: 50rpx;
   text-align: center;
+  display:flex;
+  flex-direction: row;
 }
-.Title .btn text{
-  color: #fff;
-  font-size:25rpx;
+.Title .btn .text{
+  color: #000000;
+  font-size:35rpx;
+  font-weight: bold;
+}
+
+.Title .btn .sanjiao{
+  align-items: center;
+  height: 50rpx;
+  width: 50rpx;
+  padding-left: 10rpx;
 }
 
 .Title .select{
@@ -138,10 +146,10 @@
 
 .Rank .sidai{
   position:absolute;
-  width:260rpx;
-  height:80rpx;
-  top:400rpx;
-  left:230rpx;
+  width:360rpx;
+  height:120rpx;
+  top:380rpx;
+  left:180rpx;
 }
 
 .Rank .box{
@@ -232,8 +240,8 @@
   align-items: center;
 }
 .DynShow .DynTitle .Dynzan .Dynpic{
-  width: 50rpx;
-  height: 45rpx;
+  width: 85rpx;
+  height: 85rpx;
 }
 
 .DynShow .DynTitle .Dynzan .Dynnum{

@@ -1,7 +1,10 @@
 <TabBar page_num="1" ></TabBar>
 <view class="Title">
   <view class="txt">猫咪魅力榜</view>
-  <view class="btn" bindtap="navigateToRankList"><text>完整榜单</text></view>
+  <view class="btn" bindtap="navigateToRankList">
+    <view class="text">完整榜单</view>
+    <image src="/images/RankSanJiao.png" class="sanjiao"></image>
+  </view>
 </view>
 
 <!--<view class="Rank">
@@ -70,8 +73,8 @@
       <view class="Dynname">{{item.person.nickname}}</view>
     </view>
     <view class="Dynzan" bindtap="LikeDyn" data-ind="{{index}}">
-      <image wx:if="{{item.iflike}}" src="/images/like.png" class="Dynpic"></image>
-      <image wx:else src="/images/dislike.png" class="Dynpic"></image>
+      <image wx:if="{{item.iflike}}" src="/images/shouhu-normal.png" class="Dynpic"></image>
+      <image wx:else src="/images/shouhu-selected.png" class="Dynpic"></image>
       <view  class="Dynnum">{{item.like}}</view>
     </view>
   </view>

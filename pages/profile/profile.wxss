@@ -34,10 +34,29 @@
   font-weight: bolder;
 }
 
-.box .box-bottom{
+/* .box .box-bottom{
   margin: 35rpx 30rpx;
   display: flex;
   justify-content: space-between;
+} */
+.box .box-bottom{
+  display:flex;
+  flex-direction: row;
+  text-align: center;
+}
+.box .box-bottom .box-info{
+  margin:40rpx 50rpx;
+  /* justify-content: space-betwwen; */
+}
+.box .box-bottom .box-info .box-pic{
+  /* height:50rpx;
+  width:50rpx; */
+  height:100rpx;
+  width:100rpx;
+}
+.box .box-bottom .box-info .box-txt{
+  font-size: 25rpx;
+  font-weight: bold;
 }
 
 .box .box-bottom .bottom-left{

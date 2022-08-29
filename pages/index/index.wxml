@@ -1,14 +1,17 @@
 <TabBar page_num="1" ></TabBar>
 <view class="Title">
   <view class="txt">猫咪魅力榜</view>
-  <view class="btn" bindtap="navigateToRankList"><text>完整榜单</text></view>
+  <view class="btn" bindtap="navigateToRankList">
+    <view class="text">完整榜单</view>
+    <image src="/images/RankSanJiao.png" class="sanjiao"></image>
+  </view>
 </view>
 
 <!--<view class="Rank">
   <view class="box" style="background-color: #FFE6E6" bindtap="navigatorToCatIndex" data-id="{{catdata[0].id}}">
     <view class="num" style="background-color:#FF8D8D"><text>1</text></view>
     <image src="{{catdata[0].catpic}}" class="pic" style="border: 8rpx solid #ff6b6b"></image>
-    <view class="name">{{catdata[0].catname}}</view>
+    <view class="name">{{catdata[0].catname}}<s/view>
     <view class="fans" style="color:#FF8D8D ">{{catdata[0].catlike}}个粉丝</view>
   </view>
   <view class="box" style="background-color: #f2ffdb" bindtap="navigatorToCatIndex" data-id="{{catdata[1].id}}">
@@ -36,6 +39,7 @@
   <view class="testHeaderBox">
     <image src="/images/Group 52361.png" class="testHeaderChampion"bindtap="navigatorToCatIndex" data-id="{{catdata[0].id}}"></image>
     <image src="/images/paihang-jinpai.png" class="num1"></image>
+    <image src="/images/huangguan.png" class="huangguan"></image>
     <image src="{{catdata[0].catpic}}" class="pic1" style="border: 8rpx solid rgb(255, 129, 107)"></image>
     <view class="name1">{{catdata[0].catname}}</view>
     <view class="fans1" style="color:#fa746b">{{catdata[0].catlike}}个粉丝</view>
@@ -71,8 +75,8 @@
       <view class="Dynname">{{item.person.nickname}}</view>
     </view>
     <view class="Dynzan" bindtap="LikeDyn" data-ind="{{index}}">
-      <image wx:if="{{item.iflike}}" src="/images/like.png" class="Dynpic"></image>
-      <image wx:else src="/images/dislike.png" class="Dynpic"></image>
+      <image wx:if="{{item.iflike}}" src="/images/shouhu-normal.png" class="Dynpic"></image>
+      <image wx:else src="/images/shouhu-selected.png" class="Dynpic"></image>
       <view  class="Dynnum">{{item.like}}</view>
     </view>
   </view>

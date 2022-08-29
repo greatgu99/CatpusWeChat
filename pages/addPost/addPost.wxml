@@ -4,6 +4,7 @@
 
     <view class ="Input">
       <input class="weui-input" auto-focus name="inputPost" bindinput="bindText" maxlength='100' placeholder="请输入文字(100字以内)" />
+      <image src="/images/xuanzezhaopian.png" class="pic" bindtap="ChooseImage"></image>
       <text class="Count">{{text_length}}/100</text> 
     </view>
 
@@ -11,7 +12,7 @@
     <view class="warning-text" wx:if="{{ShowWarning4}}">包含敏感文字</view>
 
     <!-- 此处为添加图片 -->
-    <view wx:if="{{HasPic}}">
+    <!-- <view wx:if="{{HasPic}}">
       <image class="pic-img" mode="widthFix" src="{{ tempFilePaths }}"></image>
     </view>
     <view wx:else>
@@ -20,7 +21,7 @@
           添加图片
         </view>
       </view>
-    </view>
+    </view> -->
 
     <view class="warning-text" wx:if="{{ShowWarning2}}">图片不能为空</view>
     <view class="warning-text" wx:if="{{ShowWarning5}}">图片包含敏感信息</view>

@@ -15,7 +15,7 @@
 
 
 <view class='cat-name'>
-  <text class='name-con'>猫的名字</text>
+  <text class='name-con'>猫咪名字</text>
   <input placeholder="请输入文字（10字以内）" maxlength='10' bindinput="addName"></input>
 </view>
 

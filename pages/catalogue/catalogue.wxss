@@ -5,16 +5,24 @@ page{
 
 .Title{
   /* border:1px solid green; */
-  padding:30rpx 20rpx;
+  padding:30rpx 40rpx;
   background:#fff;
   font-size: 40rpx;
-  font-weight: bold;
+  left:10rpx;
+  /* font-weight: bold; */
+}
+.xiahua{
+  height:10rpx;
+  width:220rpx;
+  position:absolute;
+  left:10rpx;
+  top:74rpx;
 }
 
 .addCatBtn{
   border:1rpx solid #ffcb1e;
-  height: 55rpx;
-  width: 160rpx;
+  height: 60rpx;
+  width: 240rpx;
   background: #FFF;
   border-radius: 55rpx;
   display: flex;
@@ -28,10 +36,10 @@ page{
 }
 
 .DynFT {
-  display: flex;
+  display: flex; 
   margin: 25rpx 40rpx;
   justify-content: space-between;
-  padding: 15rpx;
+  /* padding: 15rpx; */
   background: #fff;
   border-radius: 35rpx;
   align-items: center;
@@ -44,13 +52,15 @@ page{
 }
 
 .DynFT .FThead .FTpic{
-  width: 100rpx;
-  height: 100rpx;
-  border-radius: 50%;
+  width: 380rpx;
+  height: 250rpx;
+  /* border-radius: 50%; */
+  border-radius: 35rpx;
 }
 
 .DynFT .FThead .FTtxt{
-  margin-left: 15rpx;
+  margin-left: 25rpx;
+  margin-top:10rpx;
 }
 .DynFT .FThead .FTtxt .FTtxt1{
   font-size: 32rpx;
@@ -58,14 +68,29 @@ page{
 }
 
 .DynFT .FThead .FTtxt .FTtxt2{
-  margin-top: 6rpx;
-  font-size: 26rpx;
-  color: #9c9c9c;
+  margin-top: 10rpx;
+  font-size: 16rpx;
+  padding:4rpx 20rpx;
+  color: #ec6c6c;
+  background:#fcdddd;
+  border-radius: 20rpx;
+  height:22rpx;
+  text-align: center;
+}
+
+.DynFT .FThead .FTtxt .FTtxt3{
+  font-size:20rpx;
+  color:#a7a1a1;
+  margin-top:10rpx;
+  margin-left:10rpx;
 }
 .DynFT .FTButton{
-  display: flex;
+  /* display: flex; */
+  position: relative;
+  right:20rpx;
+  top:80rpx;
 }
-.DynFT .FTButton .FTbtn1{
+/* .DynFT .FTButton .FTbtn1{
   height: 50rpx;
   width: 130rpx;
   border-radius: 50rpx;
@@ -75,8 +100,8 @@ page{
   flex-direction: column;
   justify-content: center;
   align-items:center;
-}
-.DynFT .FTButton .FTbtn1 .FTtxt1{
+} */
+/* .DynFT .FTButton .FTbtn1 .FTtxt1{
   color: #ffe06e;
   font-size:25rpx;
 }
@@ -85,6 +110,11 @@ page{
   margin-left: 6rpx;
   height: 50rpx;
   width: 80rpx;
+} */
+.DynFT .FTButton .FTbtn{
+  right:10rpx;
+  height: 50rpx;
+  width: 140rpx;
 }
 
 .block{
