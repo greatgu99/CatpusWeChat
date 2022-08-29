@@ -20,15 +20,15 @@
   </view> -->
   <view class="box-bottom">
     <view class="box-info">
-      <images src="/images/zhongchou.png" class="box-pic"></images>
+      <image src="/images/zhongchou.png" class="box-pic"></image>
       <text class="box-txt">喵喵众筹</text>
     </view>
     <view class="box-info">
-      <images src="/images/touweijilu.png" class="box-pic"></images>
+      <image src="/images/touweijilu.png" class="box-pic"></image>
       <text class="box-txt">投喂记录</text>
     </view>
     <view class="box-info">
-      <images src="/images/yijian.png" class="box-pic"></images>
+      <image src="/images/yijian.png" class="box-pic"></image>
       <text class="box-txt">意见反馈</text>
     </view>
   </view>
@@ -62,7 +62,7 @@
 </view>
   -->
 
-  
+
 <!-- <button bindtap="showDyn">显示</button> -->
 
 <view class="block">

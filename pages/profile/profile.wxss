@@ -91,6 +91,8 @@
 .box .box-bottom .box-info{
   margin:40rpx 50rpx;
   /* justify-content: space-betwwen; */
+  display:flex;
+  flex-direction: column;
 }
 .box .box-bottom .box-info .box-pic{
   /* height:50rpx;
