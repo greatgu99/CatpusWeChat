@@ -75,8 +75,8 @@
       <view class="Dynname">{{item.person.nickname}}</view>
     </view>
     <view class="Dynzan" bindtap="LikeDyn" data-ind="{{index}}">
-      <image wx:if="{{item.iflike}}" src="/images/shouhu-normal.png" class="Dynpic"></image>
-      <image wx:else src="/images/shouhu-selected.png" class="Dynpic"></image>
+      <image wx:if="{{item.iflike}}" src="/images/dianzan-selected.png" class="Dynpic"></image>
+      <image wx:else src="/images/dianzan-normal.png" class="Dynpic"></image>
       <view  class="Dynnum">{{item.like}}</view>
     </view>
   </view>
@@ -90,7 +90,7 @@
     </image>
   </view>
 
-  <view class="DynFT">
+  <view class="DynFT" data-id="{{item.cat.id}}">
     <view class="FThead">
       <image src="{{item.cat.catpic}}" class="FTpic"></image>
       <view class="FTtxt">
@@ -99,9 +99,9 @@
       </view>
     </view>
     <view class="FTbtn">
-      <view class="FTbtn1" bindtap="navigatorToCatIndex" data-id="{{item.cat.id}}" ><text>进入主页</text></view>
-      <image wx:if="{{item.cat.catlike}}" class="FTbtn2" bindtap="LikeCat" data-ind="{{index}}" src="/images/yixihuan.png"></image>
-      <image wx:else class="FTbtn2" bindtap="LikeCat" data-ind="{{index}}" src="/images/xihuan.png"></image>
+     <!-- <view class="FTbtn1" bindtap="navigatorToCatIndex" data-id="{{item.cat.id}}" ><text>进入主页</text></view> -->
+      <image wx:if="{{item.cat.catlike}}" class="FTbtn2" bindtap="LikeCat" data-ind="{{index}}" src="/images/shouhu-normal.png"></image>
+      <image wx:else class="FTbtn2" bindtap="LikeCat" data-ind="{{index}}" src="/images/shouhu-selected.png"></image>
     </view>
   </view>
 </view>

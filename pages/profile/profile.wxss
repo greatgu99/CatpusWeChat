@@ -1,4 +1,50 @@
 /**index.wxss**/
+.Title{
+  padding:20rpx 40rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.Title .txt{
+  font-size:35rpx;
+  font-weight: bold;
+}
+.Title .btn{
+  height: 50rpx;
+  width: 200rpx;
+  /* padding: 1rpx 20rpx 20rpx; */
+  /* box-sizing: border-box; */
+  border-radius: 50rpx;
+  text-align: center;
+  display:flex;
+  flex-direction: row;
+}
+
+.Title .select{
+  /* height: 80rpx; */
+  /* width: 500rpx; */
+  margin:auto;
+  width:80%;
+  /* padding-top: 10rpx; */
+  padding-bottom: 0rpx;
+  text-align: center;
+  display:flex;
+}
+.Title .select .selected{
+  color:#000000;
+  font-size:33rpx;
+  padding:30rpx 60rpx 0rpx;
+  position:relative;
+  border-bottom: 1rpx solid rgb(255, 174, 0);
+}
+.Title .select .n_selected{
+  color:#000000;
+  font-size:33rpx;
+  padding:30rpx 60rpx 0rpx;
+  position:relative;
+}
+
+
+
 
 .userinfo-avatar {
   overflow: hidden;
@@ -8,13 +54,10 @@
 }
 
 .box{
-  background: #f3f3f3;
   /* border: #d7d7d7 2rpx dashed; */
   border-radius: 15rpx;
-  margin: 30rpx 40rpx;
-  
   /* width: 690rpx; */
-  height: 294rpx;
+  height: 400rpx;
 }
 .box .userinfo{
   display: flex;
@@ -43,6 +86,7 @@
   display:flex;
   flex-direction: row;
   text-align: center;
+  padding-left:70rpx;
 }
 .box .box-bottom .box-info{
   margin:40rpx 50rpx;
@@ -119,8 +163,8 @@
   align-items: center;
 }
 .DynShow .DynTitle .Dynzan .Dynpic{
-  width: 50rpx;
-  height: 45rpx;
+  width: 80rpx;
+  height: 80rpx;
 }
 
 .DynShow .DynTitle .Dynzan .Dynnum{
@@ -198,8 +242,8 @@
 
 .DynFT .FTbtn .FTbtn2{
   margin-left: 6rpx;
-  height: 50rpx;
-  width: 80rpx;
+  height: 85rpx;
+  width: 85rpx;
 }
 
 

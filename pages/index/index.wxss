@@ -329,8 +329,8 @@
 
 .DynFT .FTbtn .FTbtn2{
   margin-left: 6rpx;
-  height: 50rpx;
-  width: 80rpx;
+  height: 85rpx;
+  width: 85rpx;
   /* display: flex;
   padding: 1rpx 20rpx 20rpx;
   box-sizing: border-box;
