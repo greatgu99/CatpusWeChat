@@ -7,14 +7,16 @@
     "pages/catalogue/catalogue",
     "pages/addCat/addCat",
     "pages/profile/profile",
+    "pages/profile1/profile1",
     "pages/profile2/profile2",
     "pages/addPost/addPost",
     "pages/myLike/myLike",
     "pages/chooseCat/chooseCat",
     "pages/showTweets/showTweets",
     "pages/info/info",
-    "pages/testPage/testPage"
-
+    "pages/testPage/testPage",
+    "pages/index2/index2",
+    "pages/index1/index1"
   ],
   "window": {
     "backgroundTextStyle": "light",

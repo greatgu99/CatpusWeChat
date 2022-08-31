@@ -2,7 +2,5 @@
   "usingComponents": {
     "TabBar":"/components/TabBar/TabBar"
   },
-  "window":{
-    "backgroundColor": "#ff0000"
-  }
+  "navigationBarTitleText":"我的"
 }

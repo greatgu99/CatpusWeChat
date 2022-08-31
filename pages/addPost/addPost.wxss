@@ -1,5 +1,5 @@
 page{
-  background-color:#F3F3F3 ;
+  background-color:#fdfcea ;
 }
 
 .FormCont {
@@ -9,7 +9,7 @@ page{
   flex-direction:column;
 }
 .FormCont .Input{
-  margin:20rpx;
+  margin:30rpx;
   height:400rpx;
   background:#fff;
   border-radius:25rpx; 
@@ -17,18 +17,22 @@ page{
 .FormCont .Input .Count{
   position:relative;
   left:80%;
-  top:70%;
+  top:20%;
   color:#cfcfcf;
 }
 
-.FormCont .pic{
+.FormCont .Input .pic{
   margin:20rpx;
   width: 150rpx;
   height: 150rpx;
   background: #e6e6e6;
   display: flex;
+  position: relative;
+  top:36%;
+  left:2%;
   align-items: center;
   justify-content: center;
+  border-radius: 20rpx;
 }
 
 .FormCont .pic .pic-con{
@@ -40,14 +44,18 @@ page{
   width: 188rpx;
 }
 .FormCont .CatBtn{
-  margin:20rpx;
+  margin:20rpx 20rpx 30rpx;
   display: flex;
   background:#ffffff;
   justify-content: center;
   border-radius: 50rpx;
   align-items: center;
-  border: 1rpx solid #ffcb1e;
-  width:300rpx;
+  width:400rpx;
+}
+
+.FormCont .CatBtn .ChoiceImage{
+  height:60rpx;
+  width: 400rpx;
 }
 
 .FormCont .CatBtn text{
@@ -56,7 +64,7 @@ page{
 }
 
 .FormCont .Tab{
-  background:#ffffff;
+  background:#fdfcea;
   position:fixed;
   bottom:0;
   width:100%;
@@ -71,14 +79,14 @@ page{
   display: flex;
   /* padding: 1rpx 20rpx 20rpx; */
   /* box-sizing: border-box; */
-  background: #ffe585;
+  background: #ffd22f;
   justify-content: center;
   border-radius: 50rpx;
   align-items: center;
 }
 .FormCont .Tab .FTbtn text{
   color: #fff;
-  font-size:50rpx;
+  font-size:30rpx;
 }
 
 .warning-text{

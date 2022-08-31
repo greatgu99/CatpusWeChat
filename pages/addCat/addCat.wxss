@@ -11,13 +11,21 @@ page{
   height: 555rpx;
   background: #e6e6e6;
   display: flex;
+  flex-direction: column
+  ;
   align-items: center;
+
   justify-content: center;
+}
+
+.pic .pic-icon{
+  height: 200rpx;
+  width: 200rpx;
 }
 
 .pic .pic-con{
   font-size:25rpx;
-  color: #bbb;
+  color: #999;
 }
 
 .cat-name{
@@ -39,12 +47,12 @@ page{
   margin-left: 36rpx;
   height: 50rpx;
   /* border:1px solid green; */
-  border-radius: 50rpx;
+  border-radius: 35rpx;
   padding: 20rpx;
-  padding-left: 40rpx;
+  padding-left: 30rpx;
   width: 480rpx;
-  font-size: 24rpx;
-  background:#fff;
+  font-size: 25rpx;
+  background:#e6e6e6;
 }
 
 .cat-color{
@@ -56,6 +64,7 @@ page{
 .cat-color .color-con{
   font-size: 30rpx;
   font-weight: bolder;
+  padding-top:45rpx;
 }
 
 .cat-color .color-right{
@@ -98,7 +107,7 @@ page{
 .sub-btn{
   margin: 5rpx;
   padding:20rpx 0 40rpx; 
-  background: #ddd;
+  background: #f3f3f3;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -139,15 +148,17 @@ page{
 }
 /* 下拉框 */
 .select_box {
-  background: #fff;
-  width: 540rpx;
+  background: #e6e6e6;
+  width: 525rpx;
   margin-left: 60rpx;
-  height: 90rpx;
+  height: 85rpx;
   line-height: 90rpx;
   text-align: left;
   display: flex;
   justify-content: center;
+  border-radius: 35rpx;
   position: relative;
+  padding-left: 10rpx;
   /* border:1px solid green; */
   /* border-radius: 90rpx; */
 }
@@ -191,7 +202,7 @@ page{
   height: 0;
   overflow-y: auto;
   border-top: 0;
-  background: #fff;
+  background: #e6e6e6;
   transition: height 0.3s;
   z-index: 100;
 }
@@ -200,7 +211,7 @@ page{
   display: block;
   line-height: 40rpx;
   font-size: 28rpx;
-  border-bottom: 1px solid #efefef;
+  border-bottom: 1px solid #e6e6e6;
   padding: 10rpx;
   color: rgb(102, 102, 102);
 }

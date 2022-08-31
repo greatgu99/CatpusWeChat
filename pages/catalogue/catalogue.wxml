@@ -1,9 +1,12 @@
 <TabBar page_num="2" ></TabBar>
 
 <view style="display:flex;justify-content:space-between;background:#fff;align-items:center">
-  <view class="Title">目录</view>
-  <view class="addCatBtn" bindtap="navigateToAddCat"><text>+添加新猫咪</text></view>
+  <view class="Title">猫咪一览</view>
+  <image src="/images/mulu.png" class="xiahua"></image>
+  <!-- <view class="addCatBtn" bindtap="navigateToAddCat"><text>+添加新猫咪</text></view> -->
+  <image src="/images/tianjiamaomi.png" bindtap="navigateToAddCat" class="addCatBtn"></image>
 </view>
+
 <view wx:for="{{catdata}}" wx:key="index">
   <view class="DynFT">
     <view class="FThead">
@@ -11,15 +14,20 @@
       <view class="FTtxt">
         <view class="FTtxt1">{{item.catname}}</view>
         <view class="FTtxt2">{{item.catcolor}}</view>
+        <view class="FTtxt3">{{item.catlike}}人守护</view>
       </view>
     </view>
-    <view class="FTButton">
+    <!-- <view class="FTButton">
       <view class="FTbtn1" bindtap="navigatorToCatIndex" data-id="{{item.id}}">
         <view class="FTtxt1">进入主页</view>
       </view>
       <image wx:if="{{item.catlike}}" class="FTbtn2" src="/images/yixihuan.png" bindtap="LikeCat" data-ind="{{index}}"></image>
 
       <image wx:else class="FTbtn2" src="/images/xihuan.png" bindtap="LikeCat" data-ind="{{index}}"></image>
+    </view> -->
+    <view class="FTButton">
+      <image wx:if="{{item.catlike}}" class="FTbtn" src="/images/shouhubig-selected.png" bindtap="LikeCat" data-ind="{{index}}"></image>
+      <image wx:else class="FTbtn" src="/images/shouhubig-normal.png" bindtap="LikeCat" data-ind="{{index}}"></image>
     </view>
   </view>
 </view>

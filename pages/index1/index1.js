@@ -31,6 +31,20 @@ Page({
       url: '/pages/rank/rank',
     })
   },
+
+  navigateToSquare(){
+    wx.navigateTo(
+      {
+        url:'/pages/index1/index1',
+      }
+    )
+  },
+  navigateToMyLike(){
+    wx.navigateTo({
+      url: '/pages/index2/index2',
+    })
+  },
+  
   LikeCat(ind){
     if (appInstance.globalData.userInfo==null) {
       wx.navigateTo({

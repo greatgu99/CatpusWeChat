@@ -1,5 +1,11 @@
+<!--pages/index2/index2.wxml-->
+<TabBar page_num="1" ></TabBar>
 <view class="Title">
   <view class="txt">猫咪魅力榜</view>
+  <view class="btn" bindtap="navigateToRankList">
+    <view class="text">完整榜单</view>
+    <image src="/images/RankSanJiao.png" class="sanjiao"></image>
+  </view>
 </view>
 
 <!--<view class="Rank">
@@ -49,21 +55,21 @@
   
 </view>
 
-<view wx:for="{{catdata1}}" wx:key="index">
-  <view class="DynFT">
-    <view class="FThead">
-      <image src="{{item.catpic}}" class="FTpic"></image>
-      <view class="FTtxt">
-        <view class="FTtxt1">{{item.catname}}</view>
-        <view class="FTtxt2">{{item.catcolor}}</view>
-      </view>
-    </view>
-    <view class="FTbtn"  bindtap="navigatorToCatIndex" data-id="{{item.id}}">
-      <view class="FTtxt">进入主页</view>
-    </view>
+<!-- <view class="dynamic">
+  动态
+</view> -->
+
+<view class='Title'>
+  <view class='select' bindtap='navigateToSquare' >
+    <view class='n_selected' bindtap='navigateToSquare'>猫咪广场</view>
+    <view class='selected' bindtap='navigateToMyLike'>守护的猫</view>
+    <!-- <image src='/images/mulu.png' class='selected'></image> -->
   </view>
 </view>
 
 
+<view class='ShouHuDeMao'> 
+  <image class='CatImage' src='/images/kongyemian-shouhubeijing.png'> </image> 
+  <view class='Txt'>您还没有想守护的猫咪，快去目录认领吧 </view> 
+</view> 
 
-<!-- <button bindtap="showdata">显示</button> -->

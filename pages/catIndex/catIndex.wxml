@@ -4,12 +4,20 @@
 <view class="Title">
   <view class="Titname">
     <view class="Tittxt1">{{catdata.catname}}</view>
-    <view class="Tittxt2">{{catdata.catlocation}} | {{catdata.catcolor}}</view>
+    <!-- <view class="Tittxt2">{{catdata.catlocation}} | {{catdata.catcolor}}</view> -->
+    <view class="TitInfo">
+      <view class="Tittxt2">{{catdata.catlocation}}</view>
+      <view class="Tittxt3">{{catdata.catcolor}}</view>
+    </view>
   </view>
-  <view class="Titlike">
+  <!-- <view class="Titlike">
     <view class="Titnum">{{catdata.catlike}}</view>
     <image  wx:if="{{catdata.iflike}}" class="Titbtn" src="/images/yixihuan.png" bindtap="LikeCat" data-ind="0"></image>
     <image wx:else class="Titbtn" src="/images/xihuan.png" bindtap="LikeCat" data-ind="0"></image>
+  </view> -->
+  <view class="FTButton">
+    <image wx:if="{{catdata.iflike}}" class="FTbtn" src="/images/shouhubig-selected.png" bindtap="LikeCat" data-ind="{{index}}"></image>
+    <image wx:else class="FTbtn" src="/images/shouhubig-normal.png" bindtap="LikeCat" data-ind="{{index}}"></image>
   </view>
 </view>
 

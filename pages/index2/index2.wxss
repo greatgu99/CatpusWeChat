@@ -24,7 +24,7 @@
   /* margin-bottom: 10rpx; */
 }
 .testHeaderBox .pic1{
-  top:110rpx;
+  top:80rpx;
   left:45rpx;
   position: absolute;
   width: 120rpx;
@@ -33,7 +33,7 @@
   border: 8rpx solid #ff6b6b;
   /* margin-bottom: 10rpx; */
 }
-.testHeaderBox .testHeaderChampion{
+.testHeaderChampion{
   width: 200rpx;
   height: 350rpx;
   margin-top: 0rpx;
@@ -42,7 +42,6 @@
   padding: 25rpx 0 20rpx;
   border-radius: 20rpx;
   position: relative;
-  z-index:0;
 }
 .testHeaderBox .num{
   position:absolute;
@@ -50,15 +49,6 @@
   height:120rpx;
   left:0rpx;
   top:45rpx;
-}
-.testHeaderBox .huangguan{
-  position:absolute;
-  width:100rpx;
-  height:100rpx;
-  top:40rpx;
-  left:70rpx;
-  display:overlay;
-  z-index:1;
 }
 .testHeaderBox .num1{
   position:absolute;
@@ -82,13 +72,13 @@
   font-size:32rpx;
   font-weight: bold;
   position:absolute;
-  bottom:100rpx;
+  bottom:130rpx;
 }
 .testHeaderBox .fans1{
   font-size:26rpx;
   color: #ff9e9e;
   position:absolute;
-  bottom:60rpx;
+  bottom:90rpx;
 }
 
 .Title{
@@ -146,6 +136,7 @@
   padding:30rpx 60rpx 0rpx;
   position:relative;
 }
+
 
 .Rank{
   display: flex;
@@ -347,5 +338,30 @@
 .block{
   height: 190rpx;
   width: 100%;
+}/* pages/index2/index2.wxss */
 
+
+
+.ShouHuDeMao{
+  padding:20rpx 40rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.ShouHuDeMao .CatImage{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:300rpx;
+  width:330rpx;
+  padding:60rpx 0rpx 30rpx 0rpx;
+}
+
+.ShouHuDeMao .Txt{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28rpx;
+  color:#9c9c9c;
 }

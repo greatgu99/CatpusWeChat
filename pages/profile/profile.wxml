@@ -1,5 +1,5 @@
 <TabBar page_num="4" ></TabBar>
-<view class="box">
+<view class="box" style="background-image: url(/images/wodebeijing.png);">
   <view class="userinfo">
     <view class="user-img">
       <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
@@ -9,7 +9,7 @@
     </view>
   </view>
 
-  <view class="box-bottom" bindtap="navigateToMyLike">
+  <!-- <view class="box-bottom" bindtap="navigateToMyLike">
     <view class="bottom-left">
       <image class="bottom-img" src="/images/profileimg.png"></image>
       <view class="bottom-con">我喜欢的猫咪</view>  
@@ -17,6 +17,28 @@
     <view class="bottom-right" >
       >
     </view>
+  </view> -->
+  <view class="box-bottom">
+    <view class="box-info">
+      <image src="/images/zhongchou.png" class="box-pic"></image>
+      <text class="box-txt">喵喵众筹</text>
+    </view>
+    <view class="box-info">
+      <image src="/images/touweijilu.png" class="box-pic"></image>
+      <text class="box-txt">投喂记录</text>
+    </view>
+    <view class="box-info">
+      <image src="/images/yijian.png" class="box-pic"></image>
+      <text class="box-txt">意见反馈</text>
+    </view>
+  </view>
+</view>
+
+<view class='Title'>
+  <view class='select' bindtap='navigateToMyPost' >
+    <view class='selected' bindtap='navigateToMyPost'>我的动态</view>
+    <view class='n_selected' bindtap='navigateToMyLikeCat'>守护的猫</view>
+    <!-- <image src='/images/mulu.png' class='selected'></image> -->
   </view>
 </view>
 
@@ -27,10 +49,10 @@
       <view class="Dynname">{{item.person.nickname}}</view>
     </view>
     <view class="DynheadRight">
-      <image class="del" src="/images/chacha.png" bindtap="delDyn" data-ind="{{index}}"></image>
+   <!--  <image class="del" src="/images/chacha.png" bindtap="delDyn" data-ind="{{index}}"></image> --> 
       <view class="Dynzan" bindtap="LikeDyn" data-ind="{{index}}">
-        <image wx:if="{{item.iflike}}" src="/images/like.png" class="Dynpic"></image>
-        <image wx:else src="/images/dislike.png" class="Dynpic"></image>
+        <image wx:if="{{item.iflike}}" src="/images/dianzan-selected.png" class="Dynpic"></image>
+        <image wx:else src="/images/dianzan-normal.png" class="Dynpic"></image>
         <view  class="Dynnum">{{item.like}}</view>
       </view>
     </view>
@@ -54,9 +76,9 @@
       </view>
     </view>
     <view class="FTbtn">
-      <view class="FTbtn1"><text>进入主页</text></view>
-      <image wx:if="{{item.cat.catlike}}"  src="/images/yixihuan.png" class="FTbtn2" bindtap="LikeCat" data-ind="{{index}}"></image>
-      <image wx:else src="/images/xihuan.png" class="FTbtn2"  bindtap="LikeCat" data-ind="{{index}}"></image>
+    <!--  <view class="FTbtn1"><text>进入主页</text></view>  -->
+      <image wx:if="{{item.cat.catlike}}"  src="/images/shouhu-normal.png" class="FTbtn2" bindtap="LikeCat" data-ind="{{index}}"></image>
+      <image wx:else src="/images/shouhu-selected.png" class="FTbtn2"  bindtap="LikeCat" data-ind="{{index}}"></image>
     </view>
   </view>
 </view>
