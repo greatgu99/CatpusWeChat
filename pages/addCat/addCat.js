@@ -1,6 +1,7 @@
 // pages/addCat/addCat.js
 // const DB = wx.cloud.database().collection("Cat");
 let appInstance = getApp();
+const util = require('../../utils/util.js')
 Page({
   /**
    * 页面的初始数据
@@ -280,17 +281,19 @@ Page({
             console.log(22222)
           }
           console.log(res.data.tmp_file);
+          let data = {
+            catlocation: this.data.catlocation,
+            catcolor: this.data.catcolor,
+            catname: this.data.catname,
+            catpic: res.data.tmp_file,
+          }
+          data = util.dataAddHash(data)
           wx.request({
             url: appInstance.globalData.URL + "/Catpus/cat/",
             method: "POST",
             data: {
               action: "addcat",
-              data: {
-                catlocation: this.data.catlocation,
-                catcolor: this.data.catcolor,
-                catname: this.data.catname,
-                catpic: res.data.tmp_file,
-              },
+              data
             },
             success: (res) => {
               console.log(res.data.ret);

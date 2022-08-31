@@ -1,5 +1,6 @@
 // pages/profile2/profile2.js
 let appInstance = getApp();
+const util = require('../../utils/util.js')
 // const DB = wx.cloud.database().collection("User")
 // const _ = wx.cloud.database().command
 let PersonId;
@@ -41,6 +42,7 @@ Page({
                 );
                 console.log(appInstance.globalData.userInfo);
                 ret = appInstance.globalData.userInfo;
+                ret = util.dataAddHash(ret)
                 wx.request({
                   url: appInstance.globalData.URL + "/Catpus/user/",
                   method: "POST",

@@ -2,6 +2,7 @@
 // const DB = wx.cloud.database().collection("Cat");
 // const DB2 = wx.cloud.database().collection("CatPost");
 let appInstance = getApp();
+const util = require('../../utils/util.js')
 Page({
   /**
    * 页面的初始数据
@@ -150,17 +151,19 @@ Page({
             return;
           }
           console.log(res.data.tmp_file);
+          let data = {
+            personid: appInstance.globalData.userInfo.personid,
+            catid: this.data.CatData.id,
+            content: this.data.text_content,
+            pic: res.data.tmp_file,
+          }
+          data = util.dataAddHash(data)
           wx.request({
             url: appInstance.globalData.URL + "/Catpus/moments/",
             method: "POST",
             data: {
               action: "addmoments",
-              data: {
-                personid: appInstance.globalData.userInfo.personid,
-                catid: this.data.CatData.id,
-                content: this.data.text_content,
-                pic: res.data.tmp_file,
-              },
+              data
             },
             success: (res) => {
               console.log(res);

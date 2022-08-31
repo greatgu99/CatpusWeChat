@@ -5,7 +5,7 @@
 // const _ = wx.cloud.database().command
 
 let appInstance = getApp();
-
+const util = require('../../utils/util.js')
 Page({
 
   /**

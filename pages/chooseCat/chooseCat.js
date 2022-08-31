@@ -1,6 +1,7 @@
 // pages/chooseCat/choooseCat.js
 // const DB = wx.cloud.database().collection("Cat")
 let appInstance = getApp();
+const util = require('../../utils/util.js')
 Page({
 
   /**

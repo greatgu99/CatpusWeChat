@@ -13,7 +13,23 @@ const formatNumber = n => {
   n = n.toString()
   return n[1] ? n : `0${n}`
 }
-
+const dataAddHash = data =>{
+  const CryptoJS = require("crypto-js");
+  let bytesToSign=''
+  for (let x in data){
+    bytesToSign+=x
+    bytesToSign+=data[x]
+  }
+  console.log(bytesToSign)
+  // let bytesToSign =JSON.stringify(data)
+  // console.log(bytesToSign)
+  const SecretKey = 'rOWh1msXOsxLYu5xY0NtFVmcKVGntqLPTFNZ2gDy';
+  let hash = CryptoJS.HmacSHA256(bytesToSign, SecretKey);
+  let secret = CryptoJS.enc.Base64.stringify(hash);
+  console.log(secret)
+  return {...data,hashCode:secret} 
+}
 module.exports = {
-  formatTime
+  formatTime,
+  dataAddHash
 }

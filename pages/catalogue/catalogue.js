@@ -4,7 +4,7 @@
 // const _ = wx.cloud.database().command
 
 let appInstance = getApp();
-
+const util = require('../../utils/util.js')
 Page({
 
   /**
@@ -27,29 +27,33 @@ Page({
       let PersonId = this.data.UserId
       if (catdatat[id].catlike == false){
         catdatat[id].catlike = true
+        let data = {
+          catid:catdatat[id].id,
+          personid:appInstance.globalData.userInfo.personid
+        }
+        data = util.dataAddHash(data)
         wx.request({
           url: appInstance.globalData.URL+'/Catpus/likes/',
           method:"POST",
           data:{
             action:'likecat',
-            data:{
-              catid:catdatat[id].id,
-              personid:appInstance.globalData.userInfo.personid
-            }
+            data
           }
         })
       }
       else{
         catdatat[id].catlike=false
+        let data = {
+          catid:catdatat[id].id,
+          personid:appInstance.globalData.userInfo.personid
+        }
+        data = util.dataAddHash(data)
         wx.request({
           url: appInstance.globalData.URL+'/Catpus/likes/',
           method:"DELETE",
           data:{
             action:'unlikecat',
-            data:{
-              catid:catdatat[id].id,
-              personid:appInstance.globalData.userInfo.personid
-            }
+            data 
           }
         })
       }
@@ -98,15 +102,17 @@ Page({
           else{
             console.log('else')
             promiseList.push(new Promise((resolve,reject)=> {
+              let data = {
+                personid:appInstance.globalData.userInfo.personid,
+                catid:res.data.cat_list[i].id
+              }
+              data = util.dataAddHash(data)
               wx.request({
                 url:appInstance.globalData.URL+'/Catpus/likes/',
                 method:"POST",
                 data:{
                   action:'getlikecat',
-                  data:{
-                    personid:appInstance.globalData.userInfo.personid,
-                    catid:res.data.cat_list[i].id
-                  }
+                  data
                 },
                 success:(res)=>{
                   console.log(res.data)

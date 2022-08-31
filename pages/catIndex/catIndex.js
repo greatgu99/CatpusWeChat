@@ -7,7 +7,7 @@
 // const _ = wx.cloud.database().command
 
 let appInstance = getApp();
-
+const util = require('../../utils/util.js')
 
 Page({
 
@@ -36,30 +36,34 @@ Page({
       if (catdatat.iflike == false){
         catdatat.iflike = true
         catdatat.catlike=catdatat.catlike+1
+        let data = {
+          catid:catdatat.id,
+          personid:appInstance.globalData.userInfo.personid
+        }
+        data = util.dataAddHash(data)
         wx.request({
           url: appInstance.globalData.URL+'/Catpus/likes/',
           method:"POST",
           data:{
             action:'likecat',
-            data:{
-              catid:catdatat.id,
-              personid:appInstance.globalData.userInfo.personid
-            }
+            data
           }
         })
       }
       else{
         catdatat.iflike = false
         catdatat.catlike=catdatat.catlike-1
+        let data = {
+              catid:catdatat.id,
+              personid:appInstance.globalData.userInfo.personid
+            }
+            data = util.dataAddHash(data)
         wx.request({
           url: appInstance.globalData.URL+'/Catpus/likes/',
           method:"DELETE",
           data:{
             action:'unlikecat',
-            data:{
-              catid:catdatat.id,
-              personid:appInstance.globalData.userInfo.personid
-            }
+            data
           }
         })
       }
@@ -83,30 +87,34 @@ Page({
       if (Dyndatat[id].iflike == false){
         Dyndatat[id].iflike = true
         Dyndatat[id].like = Dyndatat[id].like +1
+        let data = {
+              momentsid:Dyndatat[id].id,
+              personid:appInstance.globalData.userInfo.personid
+            }
+            data = util.dataAddHash(data)
         wx.request({
           url: appInstance.globalData.URL+'/Catpus/likes/',
           method:"POST",
           data:{
             action:'likemoments',
-            data:{
-              momentsid:Dyndatat[id].id,
-              personid:appInstance.globalData.userInfo.personid
-            }
+            data
           }
         })
       }
       else{
         Dyndatat[id].iflike = false
         Dyndatat[id].like = Dyndatat[id].like -1
+        let data = {
+              momentsid:Dyndatat[id].id,
+              personid:appInstance.globalData.userInfo.personid
+            }
+            data = util.dataAddHash(data)
         wx.request({
           url: appInstance.globalData.URL+'/Catpus/likes/',
           method:"DELETE",
           data:{
             action:'unlikemoments',
-            data:{
-              momentsid:Dyndatat[id].id,
-              personid:appInstance.globalData.userInfo.personid
-            }
+            data
           }
         })
       }
@@ -141,15 +149,17 @@ Page({
             catdata:res.data.cat,
           })
         } else{
+          let data = {
+                personid:appInstance.globalData.userInfo.personid,
+                catid:catid
+              }
+              data = util.dataAddHash(data)
           wx.request({
             url:appInstance.globalData.URL+'/Catpus/likes/',
             method:"POST",
             data:{
               action:'getlikecat',
-              data:{
-                personid:appInstance.globalData.userInfo.personid,
-                catid:catid
-              }
+              data
             },
             success:(res)=>{
               console.log(res.data.catlike)
@@ -162,14 +172,16 @@ Page({
         }
       }
     })
+    let data = {
+          catid:catid,
+        }
+        data = util.dataAddHash(data)
     wx.request({
       url: appInstance.globalData.URL+'/Catpus/moments/',
       method:'POST',
       data:{
         action:'getmoments',
-        data:{
-          catid:catid,
-        }
+        data
       },
       success:(res)=>{
         console.log(res.data.moments_list)
@@ -189,15 +201,17 @@ Page({
           for (let i =0;i<res.data.moments_list.length;i++){
 
             promiseList.push(new Promise((resolve,reject)=> {
+              let data = {
+                    personid:res.data.moments_list[i].person.personid,
+                    momentsid:res.data.moments_list[i].id
+                  }
+                  data = util.dataAddHash(data)
               wx.request({
                 url:appInstance.globalData.URL+'/Catpus/likes/',
                 method:'POST',
                 data:{
                   action:'getlikemoments',
-                  data:{
-                    personid:res.data.moments_list[i].person.personid,
-                    momentsid:res.data.moments_list[i].id
-                  }
+                  data
                 },
                 success:(res)=>{
                   console.log(res.data)

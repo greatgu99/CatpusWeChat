@@ -1,3 +1,8 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "TabBar":"/components/TabBar/TabBar"
+  },
+  "window":{
+    "backgroundColor": "#ff0000"
+  }
 }

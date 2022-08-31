@@ -1,6 +1,6 @@
 // pages/info/info.js
 let appInstance = getApp();
-
+const util = require('../../utils/util.js')
 Page({
 
   /**

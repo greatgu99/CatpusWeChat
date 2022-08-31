@@ -1,4 +1,6 @@
 // pages/testPage/testPage.js
+const util = require('../../utils/util.js')
+
 Page({
 
   /**
@@ -39,6 +41,29 @@ Page({
     })
     
 
+  },
+  testRequest(){
+    let data={
+      'qwe':'super',
+      'aaa':"333",
+      "111":222,
+      
+    }
+    data = util.dataAddHash(data)
+    console.log(data)
+    wx.request({
+      url: 'http://127.0.0.1:8080/api/testurls/',
+      data:{
+        data
+      },
+      success:res=>{
+        console.log(res)
+
+      },
+      fail:res=>{
+        console.log(res)
+      }
+    })
   },
   /**
    * 生命周期函数--监听页面加载

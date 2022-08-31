@@ -1,1 +1,238 @@
-/* pages/indexTemp/indexTemp.wxss */
+.Title{
+  padding:20rpx 40rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.Title .txt{
+  font-size:35rpx;
+  font-weight: bold;
+}
+.Title .btn{
+  height: 50rpx;
+  width: 130rpx;
+  /* padding: 1rpx 20rpx 20rpx; */
+  /* box-sizing: border-box; */
+  background: #ffdb5e;
+  
+  border-radius: 50rpx;
+  text-align: center;
+}
+.Title .btn text{
+  color: #fff;
+  font-size:25rpx;
+}
+
+.Rank{
+  display: flex;
+  padding: 0 40rpx;
+  text-align: center;
+}
+
+.Rank .box{
+  width: 216rpx;
+  margin:0 12rpx;
+  padding: 25rpx 0 20rpx;
+  background: #ffe6e6;
+  border-radius: 20rpx;
+  position: relative;
+}
+.Rank .box .num{
+  width: 60rpx;
+  height: 60rpx;
+  display: flex;
+  justify-content: center;
+  background: #ff6b6b;
+  color:white;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 25rpx;
+  position: absolute;
+  top: 10rpx;
+  left: 10rpx;
+  z-index: 100;
+}
+.Rank .box .pic{
+  width: 110rpx;
+  height: 110rpx;
+  border-radius: 50%;
+  border: 8rpx solid #ff6b6b;
+  margin-bottom: 10rpx;
+}
+
+.Rank .box .name{
+  font-size:32rpx;
+  font-weight: bold;
+}
+.Rank .box .fans{
+  font-size:26rpx;
+  color: #ff9e9e;
+}
+
+
+.dynamic{
+  font-size: 35rpx;
+  padding: 20rpx 40rpx;
+  font-weight: bold;
+  /* border:1px solid green; */
+}
+
+
+.DynShow{
+  margin: 0 40rpx 40rpx;
+  padding: 25rpx 30rpx 40rpx;
+  background: #f3f3f3;
+  border-radius:  30rpx;
+  /* border: 1px solid blue; */
+}
+
+.DynShow .DynTitle{
+  /* border:1px solid blue; */
+  display: flex;
+  justify-content: space-between;
+}
+
+.DynShow .DynTitle .Dynhead{
+  /* border:1px solid blue; */
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.DynShow .DynTitle .Dynhead .Dynpic{
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 50%;
+}
+
+.DynShow .DynTitle .Dynhead .Dynname{
+  margin-left: 10rpx;
+  font-size: 28rpx;
+}
+
+.DynShow .DynTitle .Dynzan{
+  /* border:1px solid blue; */
+  display: flex;
+  align-items: center;
+}
+.DynShow .DynTitle .Dynzan .Dynpic{
+  width: 50rpx;
+  height: 45rpx;
+}
+
+.DynShow .DynTitle .Dynzan .Dynnum{
+  margin-left: 5rpx;
+  color: #c4c4c4;
+}
+
+.DynShow .DynCont{
+  margin:40rpx 5rpx;
+  /* border:1px solid green;   */
+}
+.DynShow .DynCont .Dyntxt{
+  margin-bottom: 40rpx;
+}
+
+.DynShow .DynCont .DynCatpic{
+  /* border:1px blue solid; */
+  width: 500rpx;
+  /* height: 500rpx; */
+  border-radius: 30rpx;
+}
+
+.DynFT {
+  display: flex;
+  justify-content: space-between;
+  padding: 15rpx;
+  background: #fff;
+  border-radius: 35rpx;
+  align-items: center;
+  /* border:1px solid blue; */
+}
+
+.DynFT .FThead{
+  display: flex;
+}
+
+.DynFT .FThead .FTpic{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+
+.DynFT .FThead .FTtxt{
+  margin-left: 15rpx;
+}
+.DynFT .FThead .FTtxt .FTtxt1{
+  font-size: 32rpx;
+  font-weight: bold;
+}
+
+.DynFT .FThead .FTtxt .FTtxt2{
+  margin-top: 2rpx;
+  font-size: 26rpx;
+  color: #9c9c9c;
+}
+.DynFT .FTbtn{
+  display: flex;
+  /* border: 1px solid green; */
+}
+.DynFT .FTbtn .FTbtn1{
+  height: 42rpx;
+  width: 130rpx;
+  /* padding: 1rpx 20rpx 20rpx; */
+  /* box-sizing: border-box; */
+  border:4rpx solid #ffe585;
+  display: flex;
+  justify-content: center;
+  border-radius: 50rpx;
+  align-items: center;
+}
+.DynFT .FTbtn .FTbtn1 text{
+  color: #ffe06e;
+  font-size:25rpx;
+}
+
+.DynFT .FTbtn .FTbtn2{
+  margin-left: 6rpx;
+  height: 50rpx;
+  width: 80rpx;
+  /* display: flex;
+  padding: 1rpx 20rpx 20rpx;
+  box-sizing: border-box;
+  background: #fed025;
+  justify-content: center;
+  border-radius: 50rpx;
+  align-items: center; */
+}
+.DynFT .FTbtn .FTbtn2 text{
+  color: #fff;
+  font-size:25rpx;
+}
+
+
+.block{
+  height: 190rpx;
+  width: 100%;
+}
+
+.testHeader{
+  width: 750rpx;
+  height: 338rpx;
+  
+}
+.testHeaderBox{
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.testHeaderBox .pic{
+  top:92rpx;
+  left:79rpx;
+  position: absolute;
+  width: 102rpx;
+  height: 102rpx;
+  border-radius: 50%;
+  border: 8rpx solid #ff6b6b;
+  margin-bottom: 10rpx;
+}

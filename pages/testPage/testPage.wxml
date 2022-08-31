@@ -2,3 +2,5 @@
 <view class="btn" bind:tap="confirmBtn">进入社区</view>
 
 <button type="primary" bindtap="testloading">123123</button>
+<view style="height: 100rpx;"></view>
+<button type="primary" bindtap="testRequest">123123</button>

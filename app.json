@@ -13,8 +13,7 @@
     "pages/chooseCat/chooseCat",
     "pages/showTweets/showTweets",
     "pages/info/info",
-    "pages/testPage/testPage",
-    "pages/indexTemp/indexTemp"
+    "pages/testPage/testPage"
 
   ],
   "window": {
